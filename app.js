@@ -22,6 +22,7 @@ db.once('open', function callback () {
 });
 var regionSchema = mongoose.Schema({
     region : String,
+    population : Number,
     regionAvg : Number,
     regionAverages : Array,
     type: String,
@@ -29,7 +30,10 @@ var regionSchema = mongoose.Schema({
     sexualAvg : Number,
     domesticAvg : Number,
     murderAvg : Number,
-    grievousAvg : Number
+    grievousAvg : Number,
+    grievousYears : Array,
+    sexualYears : Array,
+    robberyYears : Array
 });
 
 

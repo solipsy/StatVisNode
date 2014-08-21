@@ -1,91 +1,437 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
-1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'install' ]
-2 info using npm@1.4.3
-3 info using node@v0.10.26
-4 verbose node symlink C:\Program Files\nodejs\\node.exe
-5 verbose readDependencies using package.json deps
-6 verbose install where, deps [ 'C:\\Users\\plahutam\\Documents\\AptanaWorkspace\\StatVis',
-6 verbose install   [ 'express',
-6 verbose install     'static-favicon',
-6 verbose install     'morgan',
-6 verbose install     'cookie-parser',
-6 verbose install     'body-parser',
-6 verbose install     'debug',
-6 verbose install     'jade',
-6 verbose install     'mongoose' ] ]
-7 info preinstall StatVis@0.0.1
-8 verbose readDependencies using package.json deps
-9 verbose already installed skipping express@~4.2.0 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-10 verbose already installed skipping static-favicon@~1.0.0 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-11 verbose already installed skipping morgan@~1.0.0 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-12 verbose already installed skipping cookie-parser@~1.0.1 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-13 verbose already installed skipping body-parser@~1.0.0 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-14 verbose already installed skipping debug@~0.7.4 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-15 verbose already installed skipping jade@~1.3.0 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-16 verbose already installed skipping mongoose@~3.8.14 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-17 silly resolved []
-18 info build C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-19 verbose linkStuff [ false,
-19 verbose linkStuff   false,
-19 verbose linkStuff   false,
-19 verbose linkStuff   'C:\\Users\\plahutam\\Documents\\AptanaWorkspace' ]
-20 info linkStuff StatVis@0.0.1
-21 verbose linkBins StatVis@0.0.1
-22 verbose linkMans StatVis@0.0.1
-23 verbose rebuildBundles StatVis@0.0.1
-24 verbose rebuildBundles [ '.bin',
-24 verbose rebuildBundles   'body-parser',
-24 verbose rebuildBundles   'cookie-parser',
-24 verbose rebuildBundles   'd3',
-24 verbose rebuildBundles   'debug',
-24 verbose rebuildBundles   'express',
-24 verbose rebuildBundles   'jade',
-24 verbose rebuildBundles   'mongoose',
-24 verbose rebuildBundles   'morgan',
-24 verbose rebuildBundles   'static-favicon' ]
-25 verbose rebuild bundle C:\Users\plahutam\Documents\AptanaWorkspace\StatVis\node_modules\d3
-26 info build C:\Users\plahutam\Documents\AptanaWorkspace\StatVis\node_modules\d3
-27 info preinstall d3@3.4.11
-28 verbose linkStuff [ false,
-28 verbose linkStuff   false,
-28 verbose linkStuff   false,
-28 verbose linkStuff   'C:\\Users\\plahutam\\Documents\\AptanaWorkspace\\StatVis\\node_modules' ]
-29 info linkStuff d3@3.4.11
-30 verbose linkBins d3@3.4.11
-31 verbose linkMans d3@3.4.11
-32 verbose rebuildBundles d3@3.4.11
-33 verbose rebuildBundles [ 'contextify', 'jsdom' ]
-34 verbose rebuild bundle C:\Users\plahutam\Documents\AptanaWorkspace\StatVis\node_modules\d3\node_modules\contextify
-35 info build C:\Users\plahutam\Documents\AptanaWorkspace\StatVis\node_modules\d3\node_modules\contextify
-36 info preinstall contextify@0.1.5
-37 verbose linkStuff [ false,
-37 verbose linkStuff   false,
-37 verbose linkStuff   false,
-37 verbose linkStuff   'C:\\Users\\plahutam\\Documents\\AptanaWorkspace\\StatVis\\node_modules\\d3\\node_modules' ]
-38 info linkStuff contextify@0.1.5
-39 verbose linkBins contextify@0.1.5
-40 verbose linkMans contextify@0.1.5
-41 verbose rebuildBundles contextify@0.1.5
-42 verbose rebuildBundles [ 'bindings' ]
-43 info install contextify@0.1.5
-44 verbose unsafe-perm in lifecycle true
-45 info contextify@0.1.5 Failed to exec install script
-46 error contextify@0.1.5 install: `node-gyp rebuild`
-46 error Exit status 1
-47 error Failed at the contextify@0.1.5 install script.
-47 error This is most likely a problem with the contextify package,
-47 error not with npm itself.
-47 error Tell the author that this fails on your system:
-47 error     node-gyp rebuild
-47 error You can get their info via:
-47 error     npm owner ls contextify
-47 error There is likely additional logging output above.
-48 error System Windows_NT 6.1.7601
-49 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
-50 error cwd C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
-51 error node -v v0.10.26
-52 error npm -v 1.4.3
-53 error code ELIFECYCLE
-54 verbose exit [ 1, true ]
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'contextify' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'contextify', null ]
+6 verbose cache add name=undefined spec="contextify" args=["contextify",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'contextify',
+7 verbose parsed url   path: 'contextify',
+7 verbose parsed url   href: 'contextify' }
+8 silly lockFile e90e8b6a-contextify contextify
+9 verbose lock contextify C:\Users\solipsy\AppData\Roaming\npm-cache\e90e8b6a-contextify.lock
+10 silly lockFile e90e8b6a-contextify contextify
+11 silly lockFile e90e8b6a-contextify contextify
+12 verbose addNamed [ 'contextify', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 902bbeb2-contextify contextify@
+15 verbose lock contextify@ C:\Users\solipsy\AppData\Roaming\npm-cache\902bbeb2-contextify.lock
+16 silly addNameRange { name: 'contextify', range: '*', hasData: false }
+17 verbose url raw contextify
+18 verbose url resolving [ 'https://registry.npmjs.org/', './contextify' ]
+19 verbose url resolved https://registry.npmjs.org/contextify
+20 info trying registry request attempt 1 at 18:26:56
+21 verbose etag "45MNHCV4CD3RVL0EP1CH173G1"
+22 http GET https://registry.npmjs.org/contextify
+23 http 304 https://registry.npmjs.org/contextify
+24 silly registry.get cb [ 304,
+24 silly registry.get   { date: 'Thu, 21 Aug 2014 16:26:57 GMT',
+24 silly registry.get     server: 'Apache',
+24 silly registry.get     via: '1.1 varnish',
+24 silly registry.get     'last-modified': 'Thu, 21 Aug 2014 16:26:57 GMT',
+24 silly registry.get     'cache-control': 'max-age=60',
+24 silly registry.get     etag: '"45MNHCV4CD3RVL0EP1CH173G1"',
+24 silly registry.get     'x-served-by': 'cache-fra1227-FRA',
+24 silly registry.get     'x-cache': 'HIT',
+24 silly registry.get     'x-cache-hits': '1',
+24 silly registry.get     'x-timer': 'S1408638417.636471,VS0,VE169',
+24 silly registry.get     vary: 'Accept',
+24 silly registry.get     'content-length': '0',
+24 silly registry.get     'keep-alive': 'timeout=10, max=50',
+24 silly registry.get     connection: 'Keep-Alive' } ]
+25 verbose etag contextify from cache
+26 silly addNameRange number 2 { name: 'contextify', range: '*', hasData: true }
+27 silly addNameRange versions [ 'contextify',
+27 silly addNameRange   [ '0.0.2',
+27 silly addNameRange     '0.0.3',
+27 silly addNameRange     '0.0.4',
+27 silly addNameRange     '0.0.5',
+27 silly addNameRange     '0.0.6',
+27 silly addNameRange     '0.0.7',
+27 silly addNameRange     '0.1.0',
+27 silly addNameRange     '0.1.1',
+27 silly addNameRange     '0.1.2',
+27 silly addNameRange     '0.1.3',
+27 silly addNameRange     '0.1.4',
+27 silly addNameRange     '0.1.5',
+27 silly addNameRange     '0.1.6',
+27 silly addNameRange     '0.1.7',
+27 silly addNameRange     '0.1.8' ] ]
+28 verbose addNamed [ 'contextify', '0.1.8' ]
+29 verbose addNamed [ '0.1.8', '0.1.8' ]
+30 silly lockFile c5acf7e8-contextify-0-1-8 contextify@0.1.8
+31 verbose lock contextify@0.1.8 C:\Users\solipsy\AppData\Roaming\npm-cache\c5acf7e8-contextify-0-1-8.lock
+32 silly lockFile c5acf7e8-contextify-0-1-8 contextify@0.1.8
+33 silly lockFile c5acf7e8-contextify-0-1-8 contextify@0.1.8
+34 silly lockFile 902bbeb2-contextify contextify@
+35 silly lockFile 902bbeb2-contextify contextify@
+36 silly resolved [ { name: 'contextify',
+36 silly resolved     version: '0.1.8',
+36 silly resolved     description: 'Turn an object into a persistent execution context.',
+36 silly resolved     author: { name: 'Brian McDaniel', email: 'brianmcd05@gmail.com' },
+36 silly resolved     contributors:
+36 silly resolved      [ [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object],
+36 silly resolved        [Object] ],
+36 silly resolved     keywords: [ 'context', 'vm' ],
+36 silly resolved     repository:
+36 silly resolved      { type: 'git',
+36 silly resolved        url: 'https://github.com/brianmcd/contextify.git' },
+36 silly resolved     main: './lib/contextify',
+36 silly resolved     scripts: { test: 'nodeunit test/', install: 'node-gyp rebuild' },
+36 silly resolved     engines: { node: '>=0.4.0' },
+36 silly resolved     licenses: [ [Object] ],
+36 silly resolved     dependencies: { bindings: '*', nan: '~1.0.0' },
+36 silly resolved     devDependencies: { nodeunit: '>=0.5.x' },
+36 silly resolved     gypfile: true,
+36 silly resolved     readme: '# Contextify\n\nFor Windows issues, see here: https://github.com/brianmcd/contextify/wiki/Windows-Installation-Guide\n\nPlease add to the wiki if you find new issues/solutions.\n\nTurn an object into a V8 execution context.  A contextified object acts as the global \'this\' when executing scripts in its context.  Contextify adds 3 methods to the contextified object: run(code, filename), getGlobal(), and dispose().  The main difference between Contextify and Node\'s vm methods is that Contextify allows asynchronous functions to continue executing in the Contextified object\'s context.  See vm vs. Contextify below for more discussion.\n\n## Examples\n```javascript\nvar Contextify = require(\'contextify\');\nvar sandbox = { console : console, prop1 : \'prop1\'};\nContextify(sandbox);\nsandbox.run(\'console.log(prop1);\');\nsandbox.dispose(); // free the resources allocated for the context.\n```\n\n```javascript\nvar sandbox = Contextify(); // returns an empty contextified object.\nsandbox.run(\'var x = 3;\');\nconsole.log(sandbox.x); // prints 3\nsandbox.dispose();\n```\n\n```javascript\nvar sandbox = Contextify({setTimeout : setTimeout});\nsandbox.run("setTimeout(function () { x = 3; }, 5);");\nconsole.log(sandbox.x); // prints undefined\nsetTimeout(function () {\n    console.log(sandbox.x); // prints 3\n    sandbox.dispose();\n}, 10);\n```\n## Details\n\n**Contextify([sandbox])**\n\n    sandbox - The object to contextify, which will be modified as described below\n              If no sandbox is specified, an empty object will be allocated and used instead.\n\n    Returns the contextified object.  It doesn\'t make a copy, so if you already have a reference\n    to the sandbox, you don\'t need to catch the return value.\n\nA Contextified object has 2 methods added to it:\n\n**run(code, [filename])**\n\n    code - string containing JavaScript to execute\n    filename  - an optional filename for debugging.\n\n    Runs the code in the Contextified object\'s context.\n\n**getGlobal()**\n\nReturns the actual global object for the V8 context.  The global object is initialized with interceptors (discussed below) which forward accesses on it to the contextified object.  This means the contextified object acts like the global object in most cases.  Sometimes, though, you need to make a reference to the actual global object.\n\nFor example:\n\n```javascript\nvar window = Contextify({console : console});\nwindow.window = window;\nwindow.run("console.log(window === this);");\n// prints false.\n```\n\n```javascript\nvar window = Contextify({console : console});\nwindow.window = window.getGlobal();\nwindow.run("console.log(window === this);");\n// prints true\n```\n\nThe global object returned by getGlobal() can be treated like the contextified sandbox object, except that defining getters/setters will not work on it.  Define getters and setters on the actual sandbox object instead.\n\n**dispose()**\n\nFrees the memory allocated for the underlying V8 context.  If you don\'t call this when you\'re done, the V8 context memory will leak, as will the sandbox memory, since the context\'s global stores a strong reference to the sandbox object.  You can still use your sandbox object after calling dispose(), but it\'s unsafe to use a global previously returned from getGlobal().  run, getGlobal, and dispose will be removed from the sandbox object.\n\n## Install\n\n    npm install contextify\n\n## require(\'vm\') vs. Contextify\n\nNode\'s vm functions (runInContext etc) work by copying the values from the sandbox object onto a context\'s global object, executing the passed in script, then copying the results back.  This means that scripts that create asynchronous functions (using mechanisms like setTimeout) won\'t have see the results of executing those functions, since the copying in/out only occurs during an explicit call to runInContext and friends.  \n\nContextify creates a V8 context, and uses interceptors (see: http://code.google.com/apis/v8/embed.html#interceptors) to forward global object accesses to the sandbox object.  This means there is no copying in or out, so asynchronous functions have the expected effect on the sandbox object.  \n\n## Tests\n\nTesting is done with nodeunit.  Run the tests with\n\n    nodeunit test/\n\nOutput: \n\n    OK: 92 assertions (27ms)\n\n\n## Building\n\n    node-gyp rebuild\n\n## Acknowledgments\n\nInspiration taken from Assaf\'s Zombie.js context solution: https://github.com/assaf/zombie\n',
+36 silly resolved     readmeFilename: 'README.md',
+36 silly resolved     bugs: { url: 'https://github.com/brianmcd/contextify/issues' },
+36 silly resolved     homepage: 'https://github.com/brianmcd/contextify',
+36 silly resolved     _id: 'contextify@0.1.8',
+36 silly resolved     _shasum: '57fe505a1a54855d3af2aacd77110f33a04abe2d',
+36 silly resolved     _from: 'contextify@',
+36 silly resolved     _resolved: 'https://registry.npmjs.org/contextify/-/contextify-0.1.8.tgz' } ]
+37 info install contextify@0.1.8 into c:\Users\solipsy\WebstormProjects\StatVis
+38 info installOne contextify@0.1.8
+39 info c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify unbuild
+40 verbose tar unpack C:\Users\solipsy\AppData\Roaming\npm-cache\contextify\0.1.8\package.tgz
+41 silly lockFile 1bb48604--StatVis-node-modules-contextify tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify
+42 verbose lock tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify C:\Users\solipsy\AppData\Roaming\npm-cache\1bb48604--StatVis-node-modules-contextify.lock
+43 silly lockFile a16f4eac-che-contextify-0-1-8-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\contextify\0.1.8\package.tgz
+44 verbose lock tar://C:\Users\solipsy\AppData\Roaming\npm-cache\contextify\0.1.8\package.tgz C:\Users\solipsy\AppData\Roaming\npm-cache\a16f4eac-che-contextify-0-1-8-package-tgz.lock
+45 silly gunzTarPerm modes [ '755', '644' ]
+46 silly gunzTarPerm extractEntry package.json
+47 silly gunzTarPerm extractEntry .npmignore
+48 silly gunzTarPerm extractEntry README.md
+49 silly gunzTarPerm extractEntry binding.gyp
+50 silly gunzTarPerm extractEntry changelog
+51 silly gunzTarPerm extractEntry LICENSE.txt
+52 silly gunzTarPerm extractEntry test/contextify.js
+53 silly gunzTarPerm extractEntry wscript
+54 silly gunzTarPerm extractEntry src/contextify.cc
+55 silly gunzTarPerm extractEntry lib/contextify.js
+56 silly lockFile 1bb48604--StatVis-node-modules-contextify tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify
+57 silly lockFile 1bb48604--StatVis-node-modules-contextify tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify
+58 silly lockFile a16f4eac-che-contextify-0-1-8-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\contextify\0.1.8\package.tgz
+59 silly lockFile a16f4eac-che-contextify-0-1-8-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\contextify\0.1.8\package.tgz
+60 info preinstall contextify@0.1.8
+61 verbose readDependencies using package.json deps
+62 verbose readDependencies using package.json deps
+63 verbose cache add [ 'bindings@*', null ]
+64 verbose cache add name=undefined spec="bindings@*" args=["bindings@*",null]
+65 verbose parsed url { protocol: null,
+65 verbose parsed url   slashes: null,
+65 verbose parsed url   auth: null,
+65 verbose parsed url   host: null,
+65 verbose parsed url   port: null,
+65 verbose parsed url   hostname: null,
+65 verbose parsed url   hash: null,
+65 verbose parsed url   search: null,
+65 verbose parsed url   query: null,
+65 verbose parsed url   pathname: 'bindings@*',
+65 verbose parsed url   path: 'bindings@*',
+65 verbose parsed url   href: 'bindings@*' }
+66 verbose cache add name="bindings" spec="*" args=["bindings","*"]
+67 verbose parsed url { protocol: null,
+67 verbose parsed url   slashes: null,
+67 verbose parsed url   auth: null,
+67 verbose parsed url   host: null,
+67 verbose parsed url   port: null,
+67 verbose parsed url   hostname: null,
+67 verbose parsed url   hash: null,
+67 verbose parsed url   search: null,
+67 verbose parsed url   query: null,
+67 verbose parsed url   pathname: '*',
+67 verbose parsed url   path: '*',
+67 verbose parsed url   href: '*' }
+68 verbose addNamed [ 'bindings', '*' ]
+69 verbose addNamed [ null, '*' ]
+70 silly lockFile a3858fc2-bindings bindings@*
+71 verbose lock bindings@* C:\Users\solipsy\AppData\Roaming\npm-cache\a3858fc2-bindings.lock
+72 verbose cache add [ 'nan@~1.0.0', null ]
+73 verbose cache add name=undefined spec="nan@~1.0.0" args=["nan@~1.0.0",null]
+74 verbose parsed url { protocol: null,
+74 verbose parsed url   slashes: null,
+74 verbose parsed url   auth: null,
+74 verbose parsed url   host: null,
+74 verbose parsed url   port: null,
+74 verbose parsed url   hostname: null,
+74 verbose parsed url   hash: null,
+74 verbose parsed url   search: null,
+74 verbose parsed url   query: null,
+74 verbose parsed url   pathname: 'nan@~1.0.0',
+74 verbose parsed url   path: 'nan@~1.0.0',
+74 verbose parsed url   href: 'nan@~1.0.0' }
+75 verbose cache add name="nan" spec="~1.0.0" args=["nan","~1.0.0"]
+76 verbose parsed url { protocol: null,
+76 verbose parsed url   slashes: null,
+76 verbose parsed url   auth: null,
+76 verbose parsed url   host: null,
+76 verbose parsed url   port: null,
+76 verbose parsed url   hostname: null,
+76 verbose parsed url   hash: null,
+76 verbose parsed url   search: null,
+76 verbose parsed url   query: null,
+76 verbose parsed url   pathname: '~1.0.0',
+76 verbose parsed url   path: '~1.0.0',
+76 verbose parsed url   href: '~1.0.0' }
+77 verbose addNamed [ 'nan', '~1.0.0' ]
+78 verbose addNamed [ null, '>=1.0.0-0 <1.1.0-0' ]
+79 silly lockFile 66a60b03-nan-1-0-0 nan@~1.0.0
+80 verbose lock nan@~1.0.0 C:\Users\solipsy\AppData\Roaming\npm-cache\66a60b03-nan-1-0-0.lock
+81 silly addNameRange { name: 'bindings', range: '*', hasData: false }
+82 silly addNameRange { name: 'nan', range: '>=1.0.0-0 <1.1.0-0', hasData: false }
+83 verbose url raw bindings
+84 verbose url resolving [ 'https://registry.npmjs.org/', './bindings' ]
+85 verbose url resolved https://registry.npmjs.org/bindings
+86 info trying registry request attempt 1 at 18:26:57
+87 verbose etag "HHDEMUMZU8OTS1DUFQCBQQ8Z"
+88 http GET https://registry.npmjs.org/bindings
+89 verbose url raw nan
+90 verbose url resolving [ 'https://registry.npmjs.org/', './nan' ]
+91 verbose url resolved https://registry.npmjs.org/nan
+92 info trying registry request attempt 1 at 18:26:57
+93 verbose etag "1V4L4UHAMWZFH6I69YC8D2UBS"
+94 http GET https://registry.npmjs.org/nan
+95 http 304 https://registry.npmjs.org/bindings
+96 silly registry.get cb [ 304,
+96 silly registry.get   { date: 'Thu, 21 Aug 2014 16:26:58 GMT',
+96 silly registry.get     server: 'Apache',
+96 silly registry.get     via: '1.1 varnish',
+96 silly registry.get     'last-modified': 'Thu, 21 Aug 2014 16:26:58 GMT',
+96 silly registry.get     'cache-control': 'max-age=60',
+96 silly registry.get     etag: '"HHDEMUMZU8OTS1DUFQCBQQ8Z"',
+96 silly registry.get     'x-served-by': 'cache-fra1233-FRA',
+96 silly registry.get     'x-cache': 'HIT',
+96 silly registry.get     'x-cache-hits': '1',
+96 silly registry.get     'x-timer': 'S1408638418.109117,VS0,VE108',
+96 silly registry.get     vary: 'Accept',
+96 silly registry.get     'content-length': '0',
+96 silly registry.get     'keep-alive': 'timeout=10, max=50',
+96 silly registry.get     connection: 'Keep-Alive' } ]
+97 verbose etag bindings from cache
+98 silly addNameRange number 2 { name: 'bindings', range: '*', hasData: true }
+99 silly addNameRange versions [ 'bindings',
+99 silly addNameRange   [ '0.0.1',
+99 silly addNameRange     '0.1.0',
+99 silly addNameRange     '0.1.1',
+99 silly addNameRange     '0.2.0',
+99 silly addNameRange     '0.2.1',
+99 silly addNameRange     '0.2.2',
+99 silly addNameRange     '0.2.3',
+99 silly addNameRange     '0.2.4',
+99 silly addNameRange     '0.3.0',
+99 silly addNameRange     '0.4.0',
+99 silly addNameRange     '1.0.0',
+99 silly addNameRange     '1.1.0',
+99 silly addNameRange     '1.1.1',
+99 silly addNameRange     '1.2.0',
+99 silly addNameRange     '1.2.1' ] ]
+100 verbose addNamed [ 'bindings', '1.2.1' ]
+101 verbose addNamed [ '1.2.1', '1.2.1' ]
+102 silly lockFile e9060511-bindings-1-2-1 bindings@1.2.1
+103 verbose lock bindings@1.2.1 C:\Users\solipsy\AppData\Roaming\npm-cache\e9060511-bindings-1-2-1.lock
+104 http 304 https://registry.npmjs.org/nan
+105 silly registry.get cb [ 304,
+105 silly registry.get   { date: 'Thu, 21 Aug 2014 16:26:58 GMT',
+105 silly registry.get     server: 'Apache',
+105 silly registry.get     via: '1.1 varnish',
+105 silly registry.get     'last-modified': 'Thu, 21 Aug 2014 16:26:58 GMT',
+105 silly registry.get     'cache-control': 'max-age=60',
+105 silly registry.get     etag: '"1V4L4UHAMWZFH6I69YC8D2UBS"',
+105 silly registry.get     'x-served-by': 'cache-fra1228-FRA',
+105 silly registry.get     'x-cache': 'HIT',
+105 silly registry.get     'x-cache-hits': '1',
+105 silly registry.get     'x-timer': 'S1408638418.121360,VS0,VE106',
+105 silly registry.get     vary: 'Accept',
+105 silly registry.get     'content-length': '0',
+105 silly registry.get     'keep-alive': 'timeout=10, max=50',
+105 silly registry.get     connection: 'Keep-Alive' } ]
+106 verbose etag nan from cache
+107 silly lockFile e9060511-bindings-1-2-1 bindings@1.2.1
+108 silly lockFile e9060511-bindings-1-2-1 bindings@1.2.1
+109 silly lockFile a3858fc2-bindings bindings@*
+110 silly lockFile a3858fc2-bindings bindings@*
+111 silly addNameRange number 2 { name: 'nan', range: '>=1.0.0-0 <1.1.0-0', hasData: true }
+112 silly addNameRange versions [ 'nan',
+112 silly addNameRange   [ '0.3.0-wip',
+112 silly addNameRange     '0.3.0-wip2',
+112 silly addNameRange     '0.3.0',
+112 silly addNameRange     '0.3.1',
+112 silly addNameRange     '0.3.2',
+112 silly addNameRange     '0.4.0',
+112 silly addNameRange     '0.4.1',
+112 silly addNameRange     '0.4.2',
+112 silly addNameRange     '0.4.3',
+112 silly addNameRange     '0.4.4',
+112 silly addNameRange     '0.5.0',
+112 silly addNameRange     '0.5.1',
+112 silly addNameRange     '0.5.2',
+112 silly addNameRange     '0.6.0',
+112 silly addNameRange     '0.7.0',
+112 silly addNameRange     '0.7.1',
+112 silly addNameRange     '0.8.0',
+112 silly addNameRange     '1.0.0',
+112 silly addNameRange     '1.1.0',
+112 silly addNameRange     '1.1.1',
+112 silly addNameRange     '1.1.2',
+112 silly addNameRange     '1.2.0',
+112 silly addNameRange     '1.3.0' ] ]
+113 verbose addNamed [ 'nan', '1.0.0' ]
+114 verbose addNamed [ '1.0.0', '1.0.0' ]
+115 silly lockFile cc7fa090-nan-1-0-0 nan@1.0.0
+116 verbose lock nan@1.0.0 C:\Users\solipsy\AppData\Roaming\npm-cache\cc7fa090-nan-1-0-0.lock
+117 silly lockFile cc7fa090-nan-1-0-0 nan@1.0.0
+118 silly lockFile cc7fa090-nan-1-0-0 nan@1.0.0
+119 silly lockFile 66a60b03-nan-1-0-0 nan@~1.0.0
+120 silly lockFile 66a60b03-nan-1-0-0 nan@~1.0.0
+121 silly resolved [ { name: 'bindings',
+121 silly resolved     description: 'Helper module for loading your native module\'s .node file',
+121 silly resolved     keywords: [ 'native', 'addon', 'bindings', 'gyp', 'waf', 'c', 'c++' ],
+121 silly resolved     version: '1.2.1',
+121 silly resolved     author:
+121 silly resolved      { name: 'Nathan Rajlich',
+121 silly resolved        email: 'nathan@tootallnate.net',
+121 silly resolved        url: 'http://tootallnate.net' },
+121 silly resolved     repository:
+121 silly resolved      { type: 'git',
+121 silly resolved        url: 'git://github.com/TooTallNate/node-bindings.git' },
+121 silly resolved     main: './bindings.js',
+121 silly resolved     bugs: { url: 'https://github.com/TooTallNate/node-bindings/issues' },
+121 silly resolved     homepage: 'https://github.com/TooTallNate/node-bindings',
+121 silly resolved     license: 'MIT',
+121 silly resolved     readme: 'node-bindings\n=============\n### Helper module for loading your native module\'s .node file\n\nThis is a helper module for authors of Node.js native addon modules.\nIt is basically the "swiss army knife" of `require()`ing your native module\'s\n`.node` file.\n\nThroughout the course of Node\'s native addon history, addons have ended up being\ncompiled in a variety of different places, depending on which build tool and which\nversion of node was used. To make matters worse, now the _gyp_ build tool can\nproduce either a _Release_ or _Debug_ build, each being built into different\nlocations.\n\nThis module checks _all_ the possible locations that a native addon would be built\nat, and returns the first one that loads successfully.\n\n\nInstallation\n------------\n\nInstall with `npm`:\n\n``` bash\n$ npm install bindings\n```\n\nOr add it to the `"dependencies"` section of your _package.json_ file.\n\n\nExample\n-------\n\n`require()`ing the proper bindings file for the current node version, platform\nand architecture is as simple as:\n\n``` js\nvar bindings = require(\'bindings\')(\'binding.node\')\n\n// Use your bindings defined in your C files\nbindings.your_c_function()\n```\n\n\nNice Error Output\n-----------------\n\nWhen the `.node` file could not be loaded, `node-bindings` throws an Error with\na nice error message telling you exactly what was tried. You can also check the\n`err.tries` Array property.\n\n```\nError: Could not load the bindings file. Tried:\n → /Users/nrajlich/ref/build/binding.node\n → /Users/nrajlich/ref/build/Debug/binding.node\n → /Users/nrajlich/ref/build/Release/binding.node\n → /Users/nrajlich/ref/out/Debug/binding.node\n → /Users/nrajlich/ref/Debug/binding.node\n → /Users/nrajlich/ref/out/Release/binding.node\n → /Users/nrajlich/ref/Release/binding.node\n → /Users/nrajlich/ref/build/default/binding.node\n → /Users/nrajlich/ref/compiled/0.8.2/darwin/x64/binding.node\n    at bindings (/Users/nrajlich/ref/node_modules/bindings/bindings.js:84:13)\n    at Object.<anonymous> (/Users/nrajlich/ref/lib/ref.js:5:47)\n    at Module._compile (module.js:449:26)\n    at Object.Module._extensions..js (module.js:467:10)\n    at Module.load (module.js:356:32)\n    at Function.Module._load (module.js:312:12)\n    ...\n```\n\n\nLicense\n-------\n\n(The MIT License)\n\nCopyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+121 silly resolved     readmeFilename: 'README.md',
+121 silly resolved     _id: 'bindings@1.2.1',
+121 silly resolved     _shasum: '14ad6113812d2d37d72e67b4cacb4bb726505f11',
+121 silly resolved     _from: 'bindings@*',
+121 silly resolved     _resolved: 'https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz' },
+121 silly resolved   { name: 'nan',
+121 silly resolved     version: '1.0.0',
+121 silly resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+121 silly resolved     main: 'include_dirs.js',
+121 silly resolved     repository: { type: 'git', url: 'git://github.com/rvagg/nan.git' },
+121 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+121 silly resolved     license: 'MIT',
+121 silly resolved     readme: 'Native Abstractions for Node.js\n===============================\n\n**A header file filled with macro and utility goodness for making add-on development for Node.js easier across versions 0.8, 0.10 and 0.11, and eventually 0.12.**\n\n***Current version: 1.0.0*** *(See [nan.h](https://github.com/rvagg/nan/blob/master/nan.h) for complete ChangeLog)*\n\n[![NPM](https://nodei.co/npm/nan.png?downloads=true)](https://nodei.co/npm/nan/) [![NPM](https://nodei.co/npm-dl/nan.png?months=6)](https://nodei.co/npm/nan/)\n\nThanks to the crazy changes in V8 (and some in Node core), keeping native addons compiling happily across versions, particularly 0.10 to 0.11/0.12, is a minor nightmare. The goal of this project is to store all logic necessary to develop native Node.js addons without having to inspect `NODE_MODULE_VERSION` and get yourself into a macro-tangle.\n\nThis project also contains some helper utilities that make addon development a bit more pleasant.\n\n * **[News & Updates](#news)**\n * **[Usage](#usage)**\n * **[Example](#example)**\n * **[API](#api)**\n\n<a name="news"></a>\n## News & Updates\n\n### May-2013: Major changes for V8 3.25 / Node 0.11.13\n\nNode 0.11.11 and 0.11.12 were both broken releases for native add-ons, you simply can\'t properly compile against either of them for different reasons. But we now have a 0.11.13 release that jumps a couple of versions of V8 ahead and includes some more, major (traumatic) API changes.\n\nBecause we are now nearing Node 0.12 and estimate that the version of V8 we are using in Node 0.11.13 will be close to the API we get for 0.12, we have taken the opportunity to not only *fix* NAN for 0.11.13 but make some major changes to improve the NAN API.\n\nWe have **removed support for Node 0.11 versions prior to 0.11.13**, (although our tests are still passing for 0.11.10). As usual, our tests are run against (and pass) the last 5 versions of Node 0.8 and Node 0.10. We also include Node 0.11.13 obviously.\n\nThe major change is something that [Benjamin Byholm](kkoopa) has put many hours in to. We now have a fantastic new `NanNew<T>(args)` interface for creating new `Local`s, this replaces `NanNewLocal()` and much more. If you look in [./nan.h](nan.h) you\'ll see a large number of overloaded versions of this method. In general you should be able to `NanNew<Type>(arguments)` for any type you want to make a `Local` from. This includes `Persistent` types, so we now have a `Local<T> NanNew(const Persistent<T> arg)` to replace `NanPersistentToLocal()`.\n\nWe also now have `NanUndefined()`, `NanNull()`, `NanTrue()` and `NanFalse()`. Mainly because of the new requirement for an `Isolate` argument for each of the native V8 versions of this.\n\nV8 has now introduced an `EscapableHandleScope` from which you `scope.Escape(Local<T> value)` to *return* a value from a one scope to another. This replaces the standard `HandleScope` and `scope.Close(Local<T> value)`, although `HandleScope` still exists for when you don\'t need to return a handle to the caller. For NAN we are exposing it as `NanEscapableScope()` and `NanEscapeScope()`, while `NanScope()` is still how you create a new scope that doesn\'t need to return handles. For older versions of Node/V8, it\'ll still map to the older `HandleScope` functionality.\n\n`NanFromV8String()` was deprecated and has now been removed. You should use `NanCString()` or `NanRawString()` instead.\n\nBecause `node::MakeCallback()` now takes an `Isolate`, and because it doesn\'t exist in older versions of Node, we\'ve introduced `NanMakeCallabck()`. You should *always* use this when calling a JavaScript function from C++.\n\nThere\'s lots more, check out the Changelog in nan.h or look through [#86](https://github.com/rvagg/nan/pull/86) for all the gory details.\n\n### Dec-2013: NanCString and NanRawString\n\nTwo new functions have been introduced to replace the functionality that\'s been provided by `NanFromV8String` until now. NanCString has sensible defaults so it\'s super easy to fetch a null-terminated c-style string out of a `v8::String`. `NanFromV8String` is still around and has defaults that allow you to pass a single handle to fetch a `char*` while `NanRawString` requires a little more attention to arguments.\n\n### Nov-2013: Node 0.11.9+ breaking V8 change\n\nThe version of V8 that\'s shipping with Node 0.11.9+ has changed the signature for new `Local`s to: `v8::Local<T>::New(isolate, value)`, i.e. introducing the `isolate` argument and therefore breaking all new `Local` declarations for previous versions. NAN 0.6+ now includes a `NanNewLocal<T>(value)` that can be used in place to work around this incompatibility and maintain compatibility with 0.8->0.11.9+ (minus a few early 0.11 releases).\n\nFor example, if you wanted to return a `null` on a callback you will have to change the argument from `v8::Local<v8::Value>::New(v8::Null())` to `NanNewLocal<v8::Value>(v8::Null())`.\n\n### Nov-2013: Change to binding.gyp `"include_dirs"` for NAN\n\nInclusion of NAN in a project\'s binding.gyp is now greatly simplified. You can now just use `"<!(node -e \\"require(\'nan\')\\")"` in your `"include_dirs"`, see example below (note Windows needs the quoting around `require` to be just right: `"require(\'nan\')"` with appropriate `\\` escaping).\n\n<a name="usage"></a>\n## Usage\n\nSimply add **NAN** as a dependency in the *package.json* of your Node addon:\n\n``` bash\n$ npm install --save nan\n```\n\nPull in the path to **NAN** in your *binding.gyp* so that you can use `#include <nan.h>` in your *.cpp* files:\n\n``` python\n"include_dirs" : [\n    "<!(node -e \\"require(\'nan\')\\")"\n]\n```\n\nThis works like a `-I<path-to-NAN>` when compiling your addon.\n\n<a name="example"></a>\n## Example\n\nSee **[LevelDOWN](https://github.com/rvagg/node-leveldown/pull/48)** for a full example of **NAN** in use.\n\nFor a simpler example, see the **[async pi estimation example](https://github.com/rvagg/nan/tree/master/examples/async_pi_estimate)** in the examples directory for full code and an explanation of what this Monte Carlo Pi estimation example does. Below are just some parts of the full example that illustrate the use of **NAN**.\n\nCompare to the current 0.10 version of this example, found in the [node-addon-examples](https://github.com/rvagg/node-addon-examples/tree/master/9_async_work) repository and also a 0.11 version of the same found [here](https://github.com/kkoopa/node-addon-examples/tree/5c01f58fc993377a567812597e54a83af69686d7/9_async_work).\n\nNote that there is no embedded version sniffing going on here and also the async work is made much simpler, see below for details on the `NanAsyncWorker` class.\n\n```c++\n// addon.cc\n#include <node.h>\n#include <nan.h>\n// ...\n\nusing v8::FunctionTemplate;\nusing v8::Handle;\nusing v8::Object;\n\nvoid InitAll(Handle<Object> exports) {\n  exports->Set(NanSymbol("calculateSync"),\n    NanNew<FunctionTemplate>(CalculateSync)->GetFunction());\n\n  exports->Set(NanSymbol("calculateAsync"),\n    NanNew<FunctionTemplate>(CalculateAsync)->GetFunction());\n}\n\nNODE_MODULE(addon, InitAll)\n```\n\n```c++\n// sync.h\n#include <node.h>\n#include <nan.h>\n\nNAN_METHOD(CalculateSync);\n```\n\n```c++\n// sync.cc\n#include <node.h>\n#include <nan.h>\n#include "./sync.h"\n// ...\n\nusing v8::Number;\n\n// Simple synchronous access to the `Estimate()` function\nNAN_METHOD(CalculateSync) {\n  NanScope();\n\n  // expect a number as the first argument\n  int points = args[0]->Uint32Value();\n  double est = Estimate(points);\n\n  NanReturnValue(NanNew<Number>(est));\n}\n```\n\n```c++\n// async.cc\n#include <node.h>\n#include <nan.h>\n#include "./async.h"\n\n// ...\n\nusing v8::Function;\nusing v8::Local;\nusing v8::Null;\nusing v8::Number;\nusing v8::Value;\n\nclass PiWorker : public NanAsyncWorker {\n public:\n  PiWorker(NanCallback *callback, int points)\n    : NanAsyncWorker(callback), points(points) {}\n  ~PiWorker() {}\n\n  // Executed inside the worker-thread.\n  // It is not safe to access V8, or V8 data structures\n  // here, so everything we need for input and output\n  // should go on `this`.\n  void Execute () {\n    estimate = Estimate(points);\n  }\n\n  // Executed when the async work is complete\n  // this function will be run inside the main event loop\n  // so it is safe to use V8 again\n  void HandleOKCallback () {\n    NanScope();\n\n    Local<Value> argv[] = {\n        NanNew(NanNull())\n      , NanNew<Number>(estimate)\n    };\n\n    callback->Call(2, argv);\n  };\n\n private:\n  int points;\n  double estimate;\n};\n\n// Asynchronous access to the `Estimate()` function\nNAN_METHOD(CalculateAsync) {\n  NanScope();\n\n  int points = args[0]->Uint32Value();\n  NanCallback *callback = new NanCallback(args[1].As<Function>());\n\n  NanAsyncQueueWorker(new PiWorker(callback, points));\n  NanReturnUndefined();\n}\n```\n\n<a name="api"></a>\n## API\n\n * <a href="#api_nan_method"><b><code>NAN_METHOD</code></b></a>\n * <a href="#api_nan_getter"><b><code>NAN_GETTER</code></b></a>\n * <a href="#api_nan_setter"><b><code>NAN_SETTER</code></b></a>\n * <a href="#api_nan_property_getter"><b><code>NAN_PROPERTY_GETTER</code></b></a>\n * <a href="#api_nan_property_setter"><b><code>NAN_PROPERTY_SETTER</code></b></a>\n * <a href="#api_nan_property_enumerator"><b><code>NAN_PROPERTY_ENUMERATOR</code></b></a>\n * <a href="#api_nan_property_deleter"><b><code>NAN_PROPERTY_DELETER</code></b></a>\n * <a href="#api_nan_property_query"><b><code>NAN_PROPERTY_QUERY</code></b></a>\n * <a href="#api_nan_index_getter"><b><code>NAN_INDEX_GETTER</code></b></a>\n * <a href="#api_nan_index_setter"><b><code>NAN_INDEX_SETTER</code></b></a>\n * <a href="#api_nan_index_enumerator"><b><code>NAN_INDEX_ENUMERATOR</code></b></a>\n * <a href="#api_nan_index_deleter"><b><code>NAN_INDEX_DELETER</code></b></a>\n * <a href="#api_nan_index_query"><b><code>NAN_INDEX_QUERY</code></b></a>\n * <a href="#api_nan_weak_callback"><b><code>NAN_WEAK_CALLBACK</code></b></a>\n * <a href="#api_nan_deprecated"><b><code>NAN_DEPRECATED</code></b></a>\n * <a href="#api_nan_inline"><b><code>NAN_INLINE</code></b></a>\n * <a href="#api_nan_new"><b><code>NanNew</code></b></a>\n * <a href="#api_nan_undefined"><b><code>NanUndefined</code></b></a>\n * <a href="#api_nan_null"><b><code>NanNull</code></b></a>\n * <a href="#api_nan_true"><b><code>NanTrue</code></b></a>\n * <a href="#api_nan_false"><b><code>NanFalse</code></b></a>\n * <a href="#api_nan_return_value"><b><code>NanReturnValue</code></b></a>\n * <a href="#api_nan_return_undefined"><b><code>NanReturnUndefined</code></b></a>\n * <a href="#api_nan_return_null"><b><code>NanReturnNull</code></b></a>\n * <a href="#api_nan_return_empty_string"><b><code>NanReturnEmptyString</code></b></a>\n * <a href="#api_nan_scope"><b><code>NanScope</code></b></a>\n * <a href="#api_nan_escapable_scope"><b><code>NanEscapableScope</code></b></a>\n * <a href="#api_nan_escape_scope"><b><code>NanEscapeScope</code></b></a>\n * <a href="#api_nan_locker"><b><code>NanLocker</code></b></a>\n * <a href="#api_nan_unlocker"><b><code>NanUnlocker</code></b></a>\n * <a href="#api_nan_get_internal_field_pointer"><b><code>NanGetInternalFieldPointer</code></b></a>\n * <a href="#api_nan_set_internal_field_pointer"><b><code>NanSetInternalFieldPointer</code></b></a>\n * <a href="#api_nan_object_wrap_handle"><b><code>NanObjectWrapHandle</code></b></a>\n * <a href="#api_nan_symbol"><b><code>NanSymbol</code></b></a>\n * <a href="#api_nan_get_pointer_safe"><b><code>NanGetPointerSafe</code></b></a>\n * <a href="#api_nan_set_pointer_safe"><b><code>NanSetPointerSafe</code></b></a>\n * <a href="#api_nan_raw_string"><b><code>NanRawString</code></b></a>\n * <a href="#api_nan_c_string"><b><code>NanCString</code></b></a>\n * <a href="#api_nan_boolean_option_value"><b><code>NanBooleanOptionValue</code></b></a>\n * <a href="#api_nan_uint32_option_value"><b><code>NanUInt32OptionValue</code></b></a>\n * <a href="#api_nan_error"><b><code>NanError</code></b>, <b><code>NanTypeError</code></b>, <b><code>NanRangeError</code></b></a>\n * <a href="#api_nan_throw_error"><b><code>NanThrowError</code></b>, <b><code>NanThrowTypeError</code></b>, <b><code>NanThrowRangeError</code></b>, <b><code>NanThrowError(Handle<Value>)</code></b>, <b><code>NanThrowError(Handle<Value>, int)</code></b></a>\n * <a href="#api_nan_new_buffer_handle"><b><code>NanNewBufferHandle(char *, size_t, FreeCallback, void *)</code></b>, <b><code>NanNewBufferHandle(char *, uint32_t)</code></b>, <b><code>NanNewBufferHandle(uint32_t)</code></b></a>\n * <a href="#api_nan_buffer_use"><b><code>NanBufferUse(char *, uint32_t)</code></b></a>\n * <a href="#api_nan_new_context_handle"><b><code>NanNewContextHandle</code></b></a>\n * <a href="#api_nan_get_current_context"><b><code>NanGetCurrentContext</code></b></a>\n * <a href="#api_nan_has_instance"><b><code>NanHasInstance</code></b></a>\n * <a href="#api_nan_dispose_persistent"><b><code>NanDisposePersistent</code></b></a>\n * <a href="#api_nan_assign_persistent"><b><code>NanAssignPersistent</code></b></a>\n * <a href="#api_nan_make_weak_persistent"><b><code>NanMakeWeakPersistent</code></b></a>\n * <a href="#api_nan_set_template"><b><code>NanSetTemplate</code></b></a>\n * <a href="#api_nan_make_callback"><b><code>NanMakeCallback</code></b></a>\n * <a href="#api_nan_compile_script"><b><code>NanCompileScript</code></b></a>\n * <a href="#api_nan_run_script"><b><code>NanRunScript</code></b></a>\n * <a href="#api_nan_adjust_external_memory"><b><code>NanAdjustExternalMemory</code></b></a>\n * <a href="#api_nan_add_gc_epilogue_callback"><b><code>NanAddGCEpilogueCallback</code></b></a>\n * <a href="#api_nan_add_gc_prologue_callback"><b><code>NanAddGCPrologueCallback</code></b></a>\n * <a href="#api_nan_remove_gc_epilogue_callback"><b><code>NanRemoveGCEpilogueCallback</code></b></a>\n * <a href="#api_nan_remove_gc_prologue_callback"><b><code>NanRemoveGCPrologueCallback</code></b></a>\n * <a href="#api_nan_get_heap_statistics"><b><code>NanGetHeapStatistics</code></b></a>\n * <a href="#api_nan_callback"><b><code>NanCallback</code></b></a>\n * <a href="#api_nan_async_worker"><b><code>NanAsyncWorker</code></b></a>\n * <a href="#api_nan_async_queue_worker"><b><code>NanAsyncQueueWorker</code></b></a>\n\n<a name="api_nan_method"></a>\n### NAN_METHOD(methodname)\n\nUse `NAN_METHOD` to define your V8 accessible methods:\n\n```c++\n// .h:\nclass Foo : public node::ObjectWrap {\n  ...\n\n  static NAN_METHOD(Bar);\n  static NAN_METHOD(Baz);\n}\n\n\n// .cc:\nNAN_METHOD(Foo::Bar) {\n  ...\n}\n\nNAN_METHOD(Foo::Baz) {\n  ...\n}\n```\n\nThe reason for this macro is because of the method signature change in 0.11:\n\n```c++\n// 0.10 and below:\nHandle<Value> name(const Arguments& args)\n\n// 0.11 and above\nvoid name(const FunctionCallbackInfo<Value>& args)\n```\n\nThe introduction of `FunctionCallbackInfo` brings additional complications:\n\n<a name="api_nan_getter"></a>\n### NAN_GETTER(methodname)\n\nUse `NAN_GETTER` to declare your V8 accessible getters. You get a `Local<String>` `property` and an appropriately typed `args` object that can act like the `args` argument to a `NAN_METHOD` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_GETTER`.\n\n<a name="api_nan_setter"></a>\n### NAN_SETTER(methodname)\n\nUse `NAN_SETTER` to declare your V8 accessible setters. Same as `NAN_GETTER` but you also get a `Local<Value>` `value` object to work with.\n\n<a name="api_nan_property_getter"></a>\n### NAN_PROPERTY_GETTER(cbname)\nUse `NAN_PROPERTY_GETTER` to declare your V8 accessible property getters. You get a `Local<String>` `property` and an appropriately typed `args` object that can act similar to the `args` argument to a `NAN_METHOD` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_GETTER`.\n\n<a name="api_nan_property_setter"></a>\n### NAN_PROPERTY_SETTER(cbname)\nUse `NAN_PROPERTY_SETTER` to declare your V8 accessible property setters. Same as `NAN_PROPERTY_GETTER` but you also get a `Local<Value>` `value` object to work with.\n\n<a name="api_nan_property_enumerator"></a>\n### NAN_PROPERTY_ENUMERATOR(cbname)\nUse `NAN_PROPERTY_ENUMERATOR` to declare your V8 accessible property enumerators. You get an appropriately typed `args` object like the `args` argument to a `NAN_PROPERTY_GETTER` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_ENUMERATOR`.\n\n<a name="api_nan_property_deleter"></a>\n### NAN_PROPERTY_DELETER(cbname)\nUse `NAN_PROPERTY_DELETER` to declare your V8 accessible property deleters. Same as `NAN_PROPERTY_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_DELETER`.\n\n<a name="api_nan_property_query"></a>\n### NAN_PROPERTY_QUERY(cbname)\nUse `NAN_PROPERTY_QUERY` to declare your V8 accessible property queries. Same as `NAN_PROPERTY_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_PROPERTY_QUERY`.\n\n<a name="api_nan_index_getter"></a>\n### NAN_INDEX_GETTER(cbname)\nUse `NAN_INDEX_GETTER` to declare your V8 accessible index getters. You get a `uint32_t` `index` and an appropriately typed `args` object that can act similar to the `args` argument to a `NAN_METHOD` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_INDEX_GETTER`.\n\n<a name="api_nan_index_setter"></a>\n### NAN_INDEX_SETTER(cbname)\nUse `NAN_INDEX_SETTER` to declare your V8 accessible index setters. Same as `NAN_INDEX_GETTER` but you also get a `Local<Value>` `value` object to work with.\n\n<a name="api_nan_index_enumerator"></a>\n### NAN_INDEX_ENUMERATOR(cbname)\nUse `NAN_INDEX_ENUMERATOR` to declare your V8 accessible index enumerators. You get an appropriately typed `args` object like the `args` argument to a `NAN_INDEX_GETTER` call.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_INDEX_ENUMERATOR`.\n\n<a name="api_nan_index_deleter"></a>\n### NAN_INDEX_DELETER(cbname)\nUse `NAN_INDEX_DELETER` to declare your V8 accessible index deleters. Same as `NAN_INDEX_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_INDEX_DELETER`.\n\n<a name="api_nan_index_query"></a>\n### NAN_INDEX_QUERY(cbname)\nUse `NAN_INDEX_QUERY` to declare your V8 accessible index queries. Same as `NAN_INDEX_GETTER`.\n\nYou can use `NanReturnNull()`, `NanReturnEmptyString()`, `NanReturnUndefined()` and `NanReturnValue()` in a `NAN_INDEX_QUERY`.\n\n<a name="api_nan_weak_callback"></a>\n### NAN_WEAK_CALLBACK(cbname)\n\nUse `NAN_WEAK_CALLBACK` to define your V8 WeakReference callbacks. Do not use for declaration. There is an argument object `const _NanWeakCallbackData<T, P> &data` allowing access to the weak object and the supplied parameter through its `GetValue` and `GetParameter` methods.\n\n```c++\nNAN_WEAK_CALLBACK(weakCallback) {\n  int *parameter = data.GetParameter();\n  NanMakeCallback(NanGetCurrentContext()->Global(), data.GetValue(), 0, NULL);\n  if ((*parameter)++ == 0) {\n    data.Revive();\n  } else {\n    delete parameter;\n    data.Dispose();\n  }\n}\n```\n\n<a name="api_nan_deprecated"></a>\n### NAN_DEPRECATED\nDeclares a function as deprecated.\n\n```c++\nstatic NAN_DEPRECATED NAN_METHOD(foo) {\n  ...\n}\n```\n\n<a name="api_nan_inline"></a>\n### NAN_INLINE\nInlines a function.\n\n```c++\nNAN_INLINE int foo(int bar) {\n  ...\n}\n```\n\n<a name="api_nan_new"></a>\n### Local&lt;T&gt; NanNew&lt;T&gt;( ... )\n\nUse `NanNew` to construct almost all v8 objects and make new local handles.\n\n```c++\nLocal<String> s = NanNew<String>("value");\n\n...\n\nPersistent<Object> o;\n\n...\n\nLocal<Object> lo = NanNew(o);\n\n```\n\n<a name="api_nan_undefined"></a>\n### Handle&lt;Primitive&gt; NanUndefined()\n\nUse instead of `Undefined()`\n\n<a name="api_nan_null"></a>\n### Handle&lt;Primitive&gt; NanNull()\n\nUse instead of `Null()`\n\n<a name="api_nan_true"></a>\n### Handle&lt;Primitive&gt; NanTrue()\n\nUse instead of `True()`\n\n<a name="api_nan_false"></a>\n### Handle&lt;Primitive&gt; NanFalse()\n\nUse instead of `False()`\n\n<a name="api_nan_return_value"></a>\n### NanReturnValue(Handle&lt;Value&gt;)\n\nUse `NanReturnValue` when you want to return a value from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  ...\n\n  NanReturnValue(NanNew<String>("FooBar!"));\n}\n```\n\nNo `return` statement required.\n\n<a name="api_nan_return_undefined"></a>\n### NanReturnUndefined()\n\nUse `NanReturnUndefined` when you don\'t want to return anything from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Baz) {\n  ...\n\n  NanReturnUndefined();\n}\n```\n\n<a name="api_nan_return_null"></a>\n### NanReturnNull()\n\nUse `NanReturnNull` when you want to return `Null` from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Baz) {\n  ...\n\n  NanReturnNull();\n}\n```\n\n<a name="api_nan_return_empty_string"></a>\n### NanReturnEmptyString()\n\nUse `NanReturnEmptyString` when you want to return an empty `String` from your V8 accessible method:\n\n```c++\nNAN_METHOD(Foo::Baz) {\n  ...\n\n  NanReturnEmptyString();\n}\n```\n\n<a name="api_nan_scope"></a>\n### NanScope()\n\nThe introduction of `isolate` references for many V8 calls in Node 0.11 makes `NanScope()` necessary, use it in place of `HandleScope scope`:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  NanScope();\n\n  NanReturnValue(NanNew<String>("FooBar!"));\n}\n```\n\n<a name="api_nan_escapable_scope"></a>\n### NanEscapableScope()\n\nThe separation of handle scopes into escapable and inescapable scopes makes `NanEscapableScope()` necessary, use it in place of `HandleScope scope` when you later wish to `Close()` the scope:\n\n```c++\nHandle<String> Foo::Bar() {\n  NanEscapableScope();\n\n  return NanEscapeScope(NanNew<String>("FooBar!"));\n}\n```\n\n<a name="api_nan_esacpe_scope"></a>\n### Local&lt;T&gt; NanEscapeScope(Handle&lt;T&gt; value);\nUse together with `NanEscapableScope` to escape the scope. Corresponds to `HandleScope::Close` or `EscapableHandleScope::Escape`.\n\n<a name="api_nan_locker"></a>\n### NanLocker()\n\nThe introduction of `isolate` references for many V8 calls in Node 0.11 makes `NanLocker()` necessary, use it in place of `Locker locker`:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  NanLocker();\n  ...\n  NanUnlocker();\n}\n```\n\n<a name="api_nan_unlocker"></a>\n### NanUnlocker()\n\nThe introduction of `isolate` references for many V8 calls in Node 0.11 makes `NanUnlocker()` necessary, use it in place of `Unlocker unlocker`:\n\n```c++\nNAN_METHOD(Foo::Bar) {\n  NanLocker();\n  ...\n  NanUnlocker();\n}\n```\n\n<a name="api_nan_get_internal_field_pointer"></a>\n### void * NanGetInternalFieldPointer(Handle&lt;Object&gt;, int)\n\nGets a pointer to the internal field with at `index` from a V8 `Object` handle.\n\n```c++\nLocal<Object> obj;\n...\nNanGetInternalFieldPointer(obj, 0);\n```\n<a name="api_nan_set_internal_field_pointer"></a>\n### void NanSetInternalFieldPointer(Handle&lt;Object&gt;, int, void *)\n\nSets the value of the internal field at `index` on a V8 `Object` handle.\n\n```c++\nstatic Persistent<Function> dataWrapperCtor;\n...\nLocal<Object> wrapper = NanPersistentToLocal(dataWrapperCtor)->NewInstance();\nNanSetInternalFieldPointer(wrapper, 0, this);\n```\n\n<a name="api_nan_object_wrap_handle"></a>\n### Local&lt;Object&gt; NanObjectWrapHandle(Object)\n\nWhen you want to fetch the V8 object handle from a native object you\'ve wrapped with Node\'s `ObjectWrap`, you should use `NanObjectWrapHandle`:\n\n```c++\nNanObjectWrapHandle(iterator)->Get(NanSymbol("end"))\n```\n\n<a name="api_nan_symbol"></a>\n### String NanSymbol(char *)\n\nUse to create string symbol objects (i.e. `v8::String::NewSymbol(x)`), for getting and setting object properties, or names of objects.\n\n```c++\nbool foo = false;\nif (obj->Has(NanSymbol("foo")))\n  foo = optionsObj->Get(NanSymbol("foo"))->BooleanValue()\n```\n\n<a name="api_nan_get_pointer_safe"></a>\n### Type NanGetPointerSafe(Type *[, Type])\n\nA helper for getting values from optional pointers. If the pointer is `NULL`, the function returns the optional default value, which defaults to `0`.  Otherwise, the function returns the value the pointer points to.\n\n```c++\nchar *plugh(uint32_t *optional) {\n  char res[] = "xyzzy";\n  uint32_t param = NanGetPointerSafe<uint32_t>(optional, 0x1337);\n  switch (param) {\n    ...\n  }\n  NanSetPointerSafe<uint32_t>(optional, 0xDEADBEEF);\n}  \n```\n\n<a name="api_nan_set_pointer_safe"></a>\n### bool NanSetPointerSafe(Type *, Type)\n\nA helper for setting optional argument pointers. If the pointer is `NULL`, the function simply returns `false`.  Otherwise, the value is assigned to the variable the pointer points to.\n\n```c++\nconst char *plugh(size_t *outputsize) {\n  char res[] = "xyzzy";\n  if !(NanSetPointerSafe<size_t>(outputsize, strlen(res) + 1)) {\n    ...\n  }\n\n  ...\n}\n```\n\n<a name="api_nan_raw_string"></a>\n### void* NanRawString(Handle&lt;Value&gt;, enum Nan::Encoding, size_t *, void *, size_t, int)\n\nWhen you want to convert a V8 `String` to a `char*` buffer, use `NanRawString`. You have to supply an encoding as well as a pointer to a variable that will be assigned the number of bytes in the returned string. It is also possible to supply a buffer and its length to the function in order not to have a new buffer allocated. The final argument allows setting `String::WriteOptions`.\nJust remember that you\'ll end up with an object that you\'ll need to `delete[]` at some point unless you supply your own buffer:\n\n```c++\nsize_t count;\nvoid* decoded = NanRawString(args[1], Nan::BASE64, &count, NULL, 0, String::HINT_MANY_WRITES_EXPECTED);\nchar param_copy[count];\nmemcpy(param_copy, decoded, count);\ndelete[] decoded;\n```\n\n<a name="api_nan_c_string"></a>\n### char* NanCString(Handle&lt;Value&gt;, size_t *[, char *, size_t, int])\n\nWhen you want to convert a V8 `String` to a null-terminated C `char*` use `NanCString`. The resulting `char*` will be UTF-8-encoded, and you need to supply a pointer to a variable that will be assigned the number of bytes in the returned string. It is also possible to supply a buffer and its length to the function in order not to have a new buffer allocated. The final argument allows optionally setting `String::WriteOptions`, which default to `v8::String::NO_OPTIONS`.\nJust remember that you\'ll end up with an object that you\'ll need to `delete[]` at some point unless you supply your own buffer:\n\n```c++\nsize_t count;\nchar* name = NanCString(args[0], &count);\n```\n\n<a name="api_nan_boolean_option_value"></a>\n### bool NanBooleanOptionValue(Handle&lt;Value&gt;, Handle&lt;String&gt;[, bool])\n\nWhen you have an "options" object that you need to fetch properties from, boolean options can be fetched with this pair. They check first if the object exists (`IsEmpty`), then if the object has the given property (`Has`) then they get and convert/coerce the property to a `bool`.\n\nThe optional last parameter is the *default* value, which is `false` if left off:\n\n```c++\n// `foo` is false unless the user supplies a truthy value for it\nbool foo = NanBooleanOptionValue(optionsObj, NanSymbol("foo"));\n// `bar` is true unless the user supplies a falsy value for it\nbool bar = NanBooleanOptionValueDefTrue(optionsObj, NanSymbol("bar"), true);\n```\n\n<a name="api_nan_uint32_option_value"></a>\n### uint32_t NanUInt32OptionValue(Handle&lt;Value&gt;, Handle&lt;String&gt;, uint32_t)\n\nSimilar to `NanBooleanOptionValue`, use `NanUInt32OptionValue` to fetch an integer option from your options object. Can be any kind of JavaScript `Number` and it will be coerced to an unsigned 32-bit integer.\n\nRequires all 3 arguments as a default is not optional:\n\n```c++\nuint32_t count = NanUInt32OptionValue(optionsObj, NanSymbol("count"), 1024);\n```\n\n<a name="api_nan_error"></a>\n### NanError(message), NanTypeError(message), NanRangeError(message)\n\nFor making `Error`, `TypeError` and `RangeError` objects.\n\n```c++\nLocal<Value> res = NanError("you must supply a callback argument");\n```\n\n<a name="api_nan_throw_error"></a>\n### NanThrowError(message), NanThrowTypeError(message), NanThrowRangeError(message), NanThrowError(Local&lt;Value&gt;), NanThrowError(Local&lt;Value&gt;, int)\n\nFor throwing `Error`, `TypeError` and `RangeError` objects. You should `return` this call:\n\n```c++\nreturn NanThrowError("you must supply a callback argument");\n```\n\nCan also handle any custom object you may want to throw. If used with the error code argument, it will add the supplied error code to the error object as a property called `code`.\n\n<a name="api_nan_new_buffer_handle"></a>\n### Local&lt;Object&gt; NanNewBufferHandle(char *, uint32_t), Local&lt;Object&gt; NanNewBufferHandle(uint32_t)\n\nThe `Buffer` API has changed a little in Node 0.11, this helper provides consistent access to `Buffer` creation:\n\n```c++\nNanNewBufferHandle((char*)value.data(), value.size());\n```\n\nCan also be used to initialize a `Buffer` with just a `size` argument.\n\nCan also be supplied with a `NanFreeCallback` and a hint for the garbage collector.\n\n<a name="api_nan_buffer_use"></a>\n### Local&lt;Object&gt; NanBufferUse(char*, uint32_t)\n\n`Buffer::New(char*, uint32_t)` prior to 0.11 would make a copy of the data.\nWhile it was possible to get around this, it required a shim by passing a\ncallback. So the new API `Buffer::Use(char*, uint32_t)` was introduced to remove\nneeding to use this shim.\n\n`NanBufferUse` uses the `char*` passed as the backing data, and will free the\nmemory automatically when the weak callback is called. Keep this in mind, as\ncareless use can lead to "double free or corruption" and other cryptic failures.\n\n<a name="api_nan_has_instance"></a>\n### bool NanHasInstance(Persistent&lt;FunctionTemplate&gt;&, Handle&lt;Value&gt;)\n\nCan be used to check the type of an object to determine it is of a particular class you have already defined and have a `Persistent<FunctionTemplate>` handle for.\n\n<a href="#api_nan_new_context_handle">\n### Local&lt;Context&gt; NanNewContextHandle([ExtensionConfiguration*, Handle&lt;ObjectTemplate&gt;, Handle&lt;Value&gt;])\nCreates a new `Local<Context>` handle.\n\n```c++\nLocal<FunctionTemplate> ftmpl = NanNew<FunctionTemplate>();\nLocal<ObjectTemplate> otmpl = ftmpl->InstanceTemplate();\nLocal<Context> ctx =  NanNewContextHandle(NULL, otmpl);\n```\n\n<a href="#api_nan_get_current_context">\n### Local<Context> NanGetCurrentContext()\n\nGets the current context.\n\n```c++\nLocal<Context> ctx = NanGetCurrentContext();\n```\n\n<a name="api_nan_dispose_persistent"></a>\n### void NanDisposePersistent(Persistent&lt;T&gt; &)\n\nUse `NanDisposePersistent` to dispose a `Persistent` handle.\n\n```c++\nNanDisposePersistent(persistentHandle);\n```\n\n<a name="api_nan_assign_persistent"></a>\n### NanAssignPersistent(type, handle, object)\n\nUse `NanAssignPersistent` to assign a non-`Persistent` handle to a `Persistent` one. You can no longer just declare a `Persistent` handle and assign directly to it later, you have to `Reset` it in Node 0.11, so this makes it easier.\n\nIn general it is now better to place anything you want to protect from V8\'s garbage collector as properties of a generic `Object` and then assign that to a `Persistent`. This works in older versions of Node also if you use `NanAssignPersistent`:\n\n```c++\nPersistent<Object> persistentHandle;\n\n...\n\nLocal<Object> obj = NanNew<Object>();\nobj->Set(NanSymbol("key"), keyHandle); // where keyHandle might be a Local<String>\nNanAssignPersistent(Object, persistentHandle, obj)\n```\n\n<a name="api_nan_make_weak_persistent"></a>\n### NanMakeWeakPersistent(Handle&lt;T&gt; handle, P* parameter, _NanWeakCallbackInfo&lt;T, P&gt;::Callback callback)\n\nCreates a weak persistent handle with the supplied parameter and `NAN_WEAK_CALLBACK`. The callback has to be fully specialized to work on all versions of Node.\n\n```c++\nNAN_WEAK_CALLBACK(weakCallback) {\n\n...\n\n}\n\nLocal<Function> func;\n\n...\n\nint *parameter = new int(0);\nNanMakeWeakPersistent(func, parameter, &weakCallback<Function, int>);\n```\n\n<a name="api_nan_set_template"></a>\n### NanSetTemplate(templ, name, value)\n\nUse to add properties on object and function templates.\n\n<a name="api_nan_make_callback"></a>\n### NanMakeCallback(target, func, argc, argv)\n\nUse instead of `node::MakeCallback` to call javascript functions. This is the only proper way of calling functions.\n\n<a name="api_nan_compile_script"></a>\n### NanCompileScript(Handle<String> s [, const ScriptOrigin&amp; origin])\n\nUse to create new scripts bound to the current context.\n\n<a name="api_nan_run_script"></a>\n### NanRunScript(script)\n\nUse to run both bound and unbound scripts.\n\n<a name="api_nan_adjust_external_memory"></a>\n### NanAdjustExternalMemory(int change_in_bytes)\n\nSimply does `AdjustAmountOfExternalAllocatedMemory`\n\n<a name="api_nan_add_gc_epilogue_callback"></a>\n### NanAddGCEpilogueCallback(GCEpilogueCallback callback, GCType gc_type_filter=kGCTypeAll)\n\nSimply does `AddGCEpilogueCallback`\n\n<a name="api_nan_add_gc_prologue_callback"></a>\n### NanAddGCPrologueCallback(GCPrologueCallback callback, GCType gc_type_filter=kGCTypeAll)\n\nSimply does `AddGCPrologueCallback`\n\n<a name="api_nan_remove_gc_epilogue_callback"></a>\n### NanRemoveGCEpilogueCallback(GCEpilogueCallback callback)\n\nSimply does `RemoveGCEpilogueCallback`\n\n<a name="api_nan_add_gc_prologue_callback"></a>\n### NanRemoveGCPrologueCallback(GCPrologueCallback callback)\n\nSimply does `RemoveGCPrologueCallback`\n\n<a name="api_nan_get_heap_statistics"></a>\n### NanGetHeapStatistics(HeapStatistics *heap_statistics)\n\nSimply does `GetHeapStatistics`\n\n<a name="api_nan_callback"></a>\n### NanCallback\n\nBecause of the difficulties imposed by the changes to `Persistent` handles in V8 in Node 0.11, creating `Persistent` versions of your `Handle<Function>` is annoyingly tricky. `NanCallback` makes it easier by taking your handle, making it persistent until the `NanCallback` is deleted and even providing a handy `Call()` method to fetch and execute the callback `Function`.\n\n```c++\nLocal<Function> callbackHandle = args[0].As<Function>();\nNanCallback *callback = new NanCallback(callbackHandle);\n// pass `callback` around and it\'s safe from GC until you:\ndelete callback;\n```\n\nYou can execute the callback like so:\n\n```c++\n// no arguments:\ncallback->Call(0, NULL);\n\n// an error argument:\nHandle<Value> argv[] = {\n  NanError(NanNew<String>("fail!"))\n};\ncallback->Call(1, argv);\n\n// a success argument:\nHandle<Value> argv[] = {\n  NanNull(),\n  NanNew<String>("w00t!")\n};\ncallback->Call(2, argv);\n```\n\n`NanCallback` also has a `Local<Function> GetCallback()` method that you can use\nto fetch a local handle to the underlying callback function, as well  as a\n`void SetFunction(Handle<Function>)` for setting the callback on the\n`NanCallback`.  Additionally a generic constructor is available for using\n`NanCallback` without performing heap allocations.\n\n<a name="api_nan_async_worker"></a>\n### NanAsyncWorker\n\n`NanAsyncWorker` is an abstract class that you can subclass to have much of the annoying async queuing and handling taken care of for you. It can even store arbitrary V8 objects for you and have them persist while the async work is in progress.\n\nSee a rough outline of the implementation:\n\n```c++\nclass NanAsyncWorker {\npublic:\n  NanAsyncWorker (NanCallback *callback);\n\n  // Clean up persistent handles and delete the *callback\n  virtual ~NanAsyncWorker ();\n\n  // Check the `char *errmsg` property and call HandleOKCallback()\n  // or HandleErrorCallback depending on whether it has been set or not\n  virtual void WorkComplete ();\n\n  // You must implement this to do some async work. If there is an\n  // error then allocate `errmsg` to a message and the callback will\n  // be passed that string in an Error object\n  virtual void Execute ();\n\n  // Save a V8 object in a Persistent handle to protect it from GC\n  void SavePersistent(const char *key, Local<Object> &obj);\n\n  // Fetch a stored V8 object (don\'t call from within `Execute()`)\n  Local<Object> GetFromPersistent(const char *key);\n\nprotected:\n  // Set this if there is an error, otherwise it\'s NULL\n  const char *errmsg;\n\n  // Default implementation calls the callback function with no arguments.\n  // Override this to return meaningful data\n  virtual void HandleOKCallback ();\n\n  // Default implementation calls the callback function with an Error object\n  // wrapping the `errmsg` string\n  virtual void HandleErrorCallback ();\n};\n```\n\n<a name="api_nan_async_queue_worker"></a>\n### NanAsyncQueueWorker(NanAsyncWorker *)\n\n`NanAsyncQueueWorker` will run a `NanAsyncWorker` asynchronously via libuv. Both the *execute* and *after_work* steps are taken care of for you&mdash;most of the logic for this is embedded in `NanAsyncWorker`.\n\n### Contributors\n\nNAN is only possible due to the excellent work of the following contributors:\n\n<table><tbody>\n<tr><th align="left">Rod Vagg</th><td><a href="https://github.com/rvagg">GitHub/rvagg</a></td><td><a href="http://twitter.com/rvagg">Twitter/@rvagg</a></td></tr>\n<tr><th align="left">Benjamin Byholm</th><td><a href="https://github.com/kkoopa/">GitHub/kkoopa</a></td></tr>\n<tr><th align="left">Trevor Norris</th><td><a href="https://github.com/trevnorris">GitHub/trevnorris</a></td><td><a href="http://twitter.com/trevnorris">Twitter/@trevnorris</a></td></tr>\n<tr><th align="left">Nathan Rajlich</th><td><a href="https://github.com/TooTallNate">GitHub/TooTallNate</a></td><td><a href="http://twitter.com/TooTallNate">Twitter/@TooTallNate</a></td></tr>\n<tr><th align="left">Brett Lawson</th><td><a href="https://github.com/brett19">GitHub/brett19</a></td><td><a href="http://twitter.com/brett19x">Twitter/@brett19x</a></td></tr>\n<tr><th align="left">Ben Noordhuis</th><td><a href="https://github.com/bnoordhuis">GitHub/bnoordhuis</a></td><td><a href="http://twitter.com/bnoordhuis">Twitter/@bnoordhuis</a></td></tr>\n</tbody></table>\n\nLicence &amp; copyright\n-----------------------\n\nCopyright (c) 2014 NAN contributors (listed above).\n\nNative Abstractions for Node.js is licensed under an MIT +no-false-attribs license. All rights not explicitly granted in the MIT license are reserved. See the included LICENSE file for more details.\n',
+121 silly resolved     readmeFilename: 'README.md',
+121 silly resolved     bugs: { url: 'https://github.com/rvagg/nan/issues' },
+121 silly resolved     homepage: 'https://github.com/rvagg/nan',
+121 silly resolved     _id: 'nan@1.0.0',
+121 silly resolved     _shasum: 'ae24f8850818d662fcab5acf7f3b95bfaa2ccf38',
+121 silly resolved     _from: 'nan@~1.0.0',
+121 silly resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-1.0.0.tgz' } ]
+122 info install bindings@1.2.1 into c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify
+123 info install nan@1.0.0 into c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify
+124 info installOne bindings@1.2.1
+125 info installOne nan@1.0.0
+126 info c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\bindings unbuild
+127 info c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\nan unbuild
+128 verbose tar unpack C:\Users\solipsy\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+129 silly lockFile 252ea1e4-contextify-node-modules-bindings tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\bindings
+130 verbose lock tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\bindings C:\Users\solipsy\AppData\Roaming\npm-cache\252ea1e4-contextify-node-modules-bindings.lock
+131 silly lockFile 23f1ef76-cache-bindings-1-2-1-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+132 verbose lock tar://C:\Users\solipsy\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz C:\Users\solipsy\AppData\Roaming\npm-cache\23f1ef76-cache-bindings-1-2-1-package-tgz.lock
+133 verbose tar unpack C:\Users\solipsy\AppData\Roaming\npm-cache\nan\1.0.0\package.tgz
+134 silly lockFile 49f54b1c-ules-contextify-node-modules-nan tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\nan
+135 verbose lock tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\nan C:\Users\solipsy\AppData\Roaming\npm-cache\49f54b1c-ules-contextify-node-modules-nan.lock
+136 silly lockFile 7016b2c8--npm-cache-nan-1-0-0-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\nan\1.0.0\package.tgz
+137 verbose lock tar://C:\Users\solipsy\AppData\Roaming\npm-cache\nan\1.0.0\package.tgz C:\Users\solipsy\AppData\Roaming\npm-cache\7016b2c8--npm-cache-nan-1-0-0-package-tgz.lock
+138 silly gunzTarPerm modes [ '755', '644' ]
+139 silly gunzTarPerm modes [ '755', '644' ]
+140 silly gunzTarPerm extractEntry package.json
+141 silly gunzTarPerm extractEntry package.json
+142 silly gunzTarPerm extractEntry README.md
+143 silly gunzTarPerm extractEntry bindings.js
+144 silly gunzTarPerm extractEntry README.md
+145 silly gunzTarPerm extractEntry LICENSE
+146 silly gunzTarPerm extractEntry include_dirs.js
+147 silly gunzTarPerm extractEntry .dntrc
+148 silly gunzTarPerm extractEntry build/config.gypi
+149 silly gunzTarPerm extractEntry nan.h
+150 silly lockFile 252ea1e4-contextify-node-modules-bindings tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\bindings
+151 silly lockFile 252ea1e4-contextify-node-modules-bindings tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\bindings
+152 silly lockFile 23f1ef76-cache-bindings-1-2-1-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+153 silly lockFile 23f1ef76-cache-bindings-1-2-1-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\bindings\1.2.1\package.tgz
+154 info preinstall bindings@1.2.1
+155 verbose readDependencies using package.json deps
+156 verbose readDependencies using package.json deps
+157 silly resolved []
+158 verbose about to build c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\bindings
+159 info build c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\bindings
+160 verbose linkStuff [ false,
+160 verbose linkStuff   false,
+160 verbose linkStuff   false,
+160 verbose linkStuff   'c:\\Users\\solipsy\\WebstormProjects\\StatVis\\node_modules\\contextify\\node_modules' ]
+161 info linkStuff bindings@1.2.1
+162 verbose linkBins bindings@1.2.1
+163 verbose linkMans bindings@1.2.1
+164 verbose rebuildBundles bindings@1.2.1
+165 info install bindings@1.2.1
+166 info postinstall bindings@1.2.1
+167 silly lockFile 49f54b1c-ules-contextify-node-modules-nan tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\nan
+168 silly lockFile 49f54b1c-ules-contextify-node-modules-nan tar://c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\nan
+169 silly lockFile 7016b2c8--npm-cache-nan-1-0-0-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\nan\1.0.0\package.tgz
+170 silly lockFile 7016b2c8--npm-cache-nan-1-0-0-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\nan\1.0.0\package.tgz
+171 info preinstall nan@1.0.0
+172 verbose readDependencies using package.json deps
+173 verbose readDependencies using package.json deps
+174 silly resolved []
+175 verbose about to build c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\nan
+176 info build c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify\node_modules\nan
+177 verbose linkStuff [ false,
+177 verbose linkStuff   false,
+177 verbose linkStuff   false,
+177 verbose linkStuff   'c:\\Users\\solipsy\\WebstormProjects\\StatVis\\node_modules\\contextify\\node_modules' ]
+178 info linkStuff nan@1.0.0
+179 verbose linkBins nan@1.0.0
+180 verbose linkMans nan@1.0.0
+181 verbose rebuildBundles nan@1.0.0
+182 info install nan@1.0.0
+183 info postinstall nan@1.0.0
+184 verbose about to build c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify
+185 info build c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify
+186 verbose linkStuff [ false,
+186 verbose linkStuff   false,
+186 verbose linkStuff   false,
+186 verbose linkStuff   'c:\\Users\\solipsy\\WebstormProjects\\StatVis\\node_modules' ]
+187 info linkStuff contextify@0.1.8
+188 verbose linkBins contextify@0.1.8
+189 verbose linkMans contextify@0.1.8
+190 verbose rebuildBundles contextify@0.1.8
+191 verbose rebuildBundles [ 'bindings', 'nan' ]
+192 info install contextify@0.1.8
+193 verbose unsafe-perm in lifecycle true
+194 error Error: spawn ENOENT
+194 error     at errnoException (child_process.js:998:11)
+194 error     at Process.ChildProcess._handle.onexit (child_process.js:789:34)
+195 error If you need help, you may report this *entire* log,
+195 error including the npm and node versions, at:
+195 error     <http://github.com/npm/npm/issues>
+196 error System Windows_NT 6.1.7601
+197 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "contextify"
+198 error cwd c:\Users\solipsy\WebstormProjects\StatVis
+199 error node -v v0.10.28
+200 error npm -v 1.4.9
+201 error syscall spawn
+202 error code ENOENT
+203 error errno ENOENT
+204 verbose exit [ 1, true ]
