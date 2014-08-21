@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  ul
+
   each stuff in crimes
-    li
-        = stuff.region
+    p
+        = stuff.region + " " + stuff.regionAvg

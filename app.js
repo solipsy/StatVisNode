@@ -7,7 +7,10 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var crime = require('./routes/crime')
+var crime = require('./routes/crime');
+
+//var jsdom = require ("jsdom");
+//var d3 = require("d3");
 var app = express();
 
 //defs
@@ -78,3 +81,5 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+
+app.listen(process.env.PORT || 4730);
