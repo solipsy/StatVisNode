@@ -18,6 +18,7 @@ var regionSchema = mongoose.Schema({
 
 var geoSchema = mongoose.Schema ({
     type: String,
+    subtype: String,
     data : mongoose.Schema.Types.Mixed
 });
 

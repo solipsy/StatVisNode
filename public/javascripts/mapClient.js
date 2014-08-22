@@ -1,9 +1,9 @@
-//console.log (year);
-//console.log (field);
-//console.log (datar);
+console.log (year);
+console.log (field);
+console.log (datar);
 var max,min;
 
-if (year) {
+if (year > 2007) {
     max = d3.max(datar.features, function(d) { return +d.properties[field][year-2008].rate;} );
     min = d3.min(datar.features, function(d) { return +d.properties[field][year-2008].rate;} );
 }
@@ -27,7 +27,7 @@ update(datar, 2008, countries, "normal");
 
 
 function decideColor(geo) {
-    if (year) return quantize(geo.properties[field][year-2008].rate);
+    if (year > 2007) return quantize(geo.properties[field][year-2008].rate);
     else return quantize(geo.properties[field]);
 }
 
@@ -39,8 +39,8 @@ function update(json, year, svgType, quantizeType) {
             return parseInt(d);
         });
         tooltip.classed("hidden", false).attr("style", "left:" + (mouse[0] + 25) + "px;top:" + mouse[1] + "px").html(function () {
-            if (year) return d.properties.UE_IME + " " + d.properties[field][year-2008].rate;
-            else return d.properties.UE_IME + " " + d.properties[field]
+            if (year>2007) return d.properties.UE_IME + " " + d.properties[field][year-2008].rate;
+            else return d.properties.UE_IME + " " + d.properties[field];
         });
         d3.select("#charttitle").selectAll("p").remove();
         d3.select("#charttitle").append("p").text("Upravna enota: " + d.properties.UE_IME);

@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var region = require ("../models/crime").Region;
+var elections = require ("../models/elections").Election;
 var geo = require ("../models/crime").Geo;
 var fs = require("fs");
 
 router.get('/', function(req, res) {
-    region.find({}, function(err, docs) {
+    elections.find({}, function(err, docs) {
         if(!err) {
-            res.json(200, { regions: docs });
+            res.json(200, { elections: docs });
         } else {
             res.json(500, { message: err });
         }
@@ -15,45 +15,53 @@ router.get('/', function(req, res) {
 });
 
 router.get('/view', function(req, res) {
-    region.find({}, function(err, docs) {
-        res.render ("crimes",
+    elections.find({}, function(err, docs) {
+        res.render ("elections",
             {
-                title: "regions",
-                crimes: docs
+                title: "elections",
+                elections: docs
             });
          });
 });
 
-router.get('/viz/:id', function(req, res) {
+router.get('/viz/:id/:color', function(req, res) {
     var field = req.params.id;
+	var color = req.params.color;
 
-
-    geo.findOne({subtype : "stat_obcine"}, function(err, geodocs) {
+    geo.findOne({subtype : "volitve_okraji"}, function(err, geodocs) {
         if(!err) {
-            region.find({}, function(err, datadocs) {
+            elections.find({}, function(err, datadocs) {
                 if(!err) {
                     var obcGeo = geodocs.data;
                     obcGeo = JSON.parse(obcGeo);
-
+					console.log ("*************");
                     for (var g = 0; g < obcGeo.features.length; g++) {
-                        //console.log (obcGeo.features[g].properties.UE_IME);
-                        var imeGeo = obcGeo.features[g].properties.UE_IME;
+                        //console.log (obcGeo.features[g].properties.enota);
+                        
+                        
+                        var imeGeo = obcGeo.features[g].properties.enota;
                         for (var d = 0; d < datadocs.length; d++) {
-                            var imeData = datadocs[d].region;
+                            var imeData = datadocs[d].shortName;
                             if (imeGeo == imeData) {
-                                obcGeo.features[g].properties[field] = datadocs[d][field];
+                                obcGeo.features[g].properties.unitName = datadocs[d].unitName;
+                                obcGeo.features[g].properties.year = datadocs[d].year;
+                                obcGeo.features[g].properties.turnover = datadocs[d].turnover;
+                                obcGeo.features[g].properties.data = datadocs[d].data;
                             }
                         }
+                        
                     }
-
-                    res.render ("map",
+					
+                    res.render ("electionmap",
                         {
                             title: "Map",
                             data: obcGeo,
                             embed : '<iframe width="660" height="515" src="//localhost:3000/crime/viz" frameborder="0" allowfullscreen></iframe>',
                             datafield: field,
-                            year : 1999
+                            year : 1999,
+                            colorscheme : color
                         });
+                        
                 } else {
                     res.json(500, { message: err });
                 }

@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var crime = require('./routes/crime');
+var elections = require('./routes/elections');
 
 //var jsdom = require ("jsdom");
 //var d3 = require("d3");
@@ -20,21 +21,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
     // yay!
 });
-var regionSchema = mongoose.Schema({
-    region : String,
-    population : Number,
-    regionAvg : Number,
-    regionAverages : Array,
-    type: String,
-    robberyAvg : Number,
-    sexualAvg : Number,
-    domesticAvg : Number,
-    murderAvg : Number,
-    grievousAvg : Number,
-    grievousYears : Array,
-    sexualYears : Array,
-    robberyYears : Array
-});
+
 
 
 // view engine setup
@@ -51,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/crime', crime);
+app.use('/elections', elections);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

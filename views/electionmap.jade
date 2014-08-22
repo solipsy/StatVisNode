@@ -2,10 +2,12 @@ extends layout
 
 
 block content
+  
   script.
     var datar = !{JSON.stringify(data)};
     var field = !{JSON.stringify(datafield)};
     var year = !{JSON.stringify(year)};
+    var colorscheme = !{JSON.stringify(colorscheme)};
   br
   br
   br
@@ -14,6 +16,6 @@ block content
     form
       p Embed&nbsp;
         input.embed(type="text",name="whatever",value="#{embed}")
-  script(src='/javascripts/crimemapClient.js')
+  script(src='/javascripts/electionmapClient.js')
 
 

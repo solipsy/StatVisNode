@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  table.table.table-striped.table-hover
+    thead
+      tr: th Unit 
+          th Turnover
+          th SDS
+          th SD
+          th SLS
+    tbody
+      each row in elections
+        tr
+          td
+            = row.unitName
+          td 
+            = row.turnover
+          td
+            = row.data.SDS.absolute
+          td
+            = row.data.SD.absolute
+          td
+            = row.data.SLS.absolute
