@@ -1,6 +1,21 @@
+//console.log (year);
+//console.log (field);
+//console.log (datar);
+var max,min;
+
+if (year) {
+    max = d3.max(datar.features, function(d) { return +d.properties[field][year-2008].rate;} );
+    min = d3.min(datar.features, function(d) { return +d.properties[field][year-2008].rate;} );
+}
+else {
+    max = d3.max(datar.features, function(d) { return +d.properties[field];} );
+    min = d3.min(datar.features, function(d) { return +d.properties[field];} );
+}
+
 var quantize = d3.scale.quantize()
-    .domain([0, 70])
+    .domain([min, max])
     .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
+
 var tooltip = d3.select("#map").append("div").attr("class", "tooltip");
 var projection = d3.geo.mercator().scale(10000).translate([-2300, 9300]);
 var path = d3.geo.path().projection(projection);
@@ -11,13 +26,10 @@ countries.selectAll("path").data(datar.features).enter().append("svg:path").attr
 update(datar, 2008, countries, "normal");
 
 
-
-
 function decideColor(geo) {
-    return quantize(geo.properties.regionAvg);
+    if (year) return quantize(geo.properties[field][year-2008].rate);
+    else return quantize(geo.properties[field]);
 }
-
-
 
 function update(json, year, svgType, quantizeType) {
     svgType.selectAll("path").on("click", function(d) {
@@ -26,7 +38,10 @@ function update(json, year, svgType, quantizeType) {
         var mouse = d3.mouse(svg.node()).map(function(d) {
             return parseInt(d);
         });
-        tooltip.classed("hidden", false).attr("style", "left:" + (mouse[0] + 25) + "px;top:" + mouse[1] + "px").html(d.properties.UE_IME + " " + d.properties.regionAvg);
+        tooltip.classed("hidden", false).attr("style", "left:" + (mouse[0] + 25) + "px;top:" + mouse[1] + "px").html(function () {
+            if (year) return d.properties.UE_IME + " " + d.properties[field][year-2008].rate;
+            else return d.properties.UE_IME + " " + d.properties[field]
+        });
         d3.select("#charttitle").selectAll("p").remove();
         d3.select("#charttitle").append("p").text("Upravna enota: " + d.properties.UE_IME);
         d3.select("#charttitle").append("p").attr("class", "subtitle").text("Trend gibanja kriminalnih dejanj / 10.000 preb.");

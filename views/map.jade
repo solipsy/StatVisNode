@@ -4,11 +4,16 @@ extends layout
 block content
   script.
     var datar = !{JSON.stringify(data)};
+    var field = !{JSON.stringify(datafield)};
+    var year = !{JSON.stringify(year)};
   br
   br
   br
   div#map
-
+  div#embed
+    form
+      p Embed&nbsp;
+        input.embed(type="text",name="whatever",value="#{embed}")
 
 
 

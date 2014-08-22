@@ -24,6 +24,10 @@ div.tooltip {
     opacity: 0.95;
     position: absolute;
     z-index: 5;
-    font: 1.2em "georgia", Helvetica, Arial, sans-serif;
+    font: 0.8em "georgia", Helvetica, Arial, sans-serif;
     text-align: center;
+}
+
+.embed {
+    width: 50%;
 }
