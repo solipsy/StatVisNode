@@ -21,5 +21,51 @@ div.tooltip {
 }
 
 .embed {
-    width: 50%;
+    float:left;
+    width: 100%;
+    height: 2em;
+    color:#666666;
+    font-size: 1.1em;
+    margin-top:1em;
+}
+
+.title {
+    float:left;
+    width: 100%;
+    color:#000;
+    font-size: 2.1em;
+}
+
+.info {
+    margin-left : 20px;
+}
+
+.infotext {
+    float:left;
+    width: 100%;
+    font-size: 1.4em;
+}
+
+.colorselect {
+    float:left;
+    width: 100%;
+    font-size: 1.4em;
+    color:black;
+    margin-top:1em;
+}
+
+.embedmap {
+    border:1px solid #f1f1f1;
+}
+
+.embedfooter {
+    float:left;
+    width:100%;
+    background-color:#f1f1f1;
+}
+
+.minimap {
+    float:left;
+    width:200px;
+    height:150px;
 }

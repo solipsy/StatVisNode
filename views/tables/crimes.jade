@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  br
+  br
+  br
+  table.table.table-striped.table-hover
+    thead
+      tr: th Region 
+          th Population
+          th Average Rate
+    tbody
+      each row in crimes
+        tr
+          td
+            = row.region
+          td 
+            = row.population
+          td
+            = row.regionAvg
+          td
+            = row.regionAverages[0].year
