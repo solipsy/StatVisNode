@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var crime = require('./routes/crime');
+var population = require('./routes/population');
 var elections = require('./routes/elections');
 
 //var jsdom = require ("jsdom");
@@ -16,6 +17,7 @@ var app = express();
 
 //defs
 mongoose.connect('mongodb://localhost/SloStat');
+//mongoose.connect('mongodb://virostatiq:cheeba23@proximus.modulusmongo.net:27017/juNor7ed');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
@@ -39,6 +41,7 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/kriminal', crime);
 app.use('/volitve', elections);
+app.use('/prebivalstvo', population);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

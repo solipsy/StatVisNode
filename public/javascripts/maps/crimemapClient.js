@@ -1,15 +1,21 @@
 console.log (year);
 console.log (field);
 console.log (datar);
+console.log (embedUrl);
 var max,min;
 
 if (year > 2007) {
-    max = d3.max(datar.features, function(d) { return +d.properties[field][year-2008].rate;} );
-    min = d3.min(datar.features, function(d) { return +d.properties[field][year-2008].rate;} );
+    max = d3.max(datar.features, function(d) { return +d.properties.letno[field][year-2008].rate;} );
+    min = d3.min(datar.features, function(d) { return +d.properties.letno[field][year-2008].rate;} );
+}
+else if (year != 1) {
+
+    max = d3.max(datar.features, function(d) { return +d.properties.splosno[field];} );
+    min = d3.min(datar.features, function(d) { return +d.properties.splosno[field];} );
 }
 else {
-    max = d3.max(datar.features, function(d) { return +d.properties[field];} );
-    min = d3.min(datar.features, function(d) { return +d.properties[field];} );
+    max = 1;
+    min = 0;
 }
 
 console.log (max);
@@ -29,8 +35,9 @@ update(datar, year, countries, "normal");
 
 
 function decideColor(geo) {
-    if (year > 2007) return quantize(geo.properties[field][year-2008].rate);
-    else return quantize(geo.properties[field]);
+    //console.log (geo);
+    if (year > 2007) return quantize(geo.properties.letno[field][year-2008].rate);
+    else return quantize(geo.properties.splosno[field]);
 }
 
 function update(json, year, svgType, quantizeType) {
@@ -41,8 +48,8 @@ function update(json, year, svgType, quantizeType) {
             return parseInt(d);
         });
         tooltip.classed("hidden", false).attr("style", "left:" + (mouse[0] + 25) + "px;top:" + mouse[1] + "px").html(function () {
-        	if (year > 2007) return d.properties.UE_IME + " " + d.properties[field][year-2008].rate;
-            else return d.properties.UE_IME + " " + d.properties[field];
+        	if (year > 2007) return d.properties.UE_IME + " " + d.properties.letno[field][year-2008].rate;
+            else return d.properties.UE_IME + " " + d.properties.splosno[field];
         });
         d3.select("#charttitle").selectAll("p").remove();
         d3.select("#charttitle").append("p").text("Upravna enota: " + d.properties.UE_IME);
@@ -59,13 +66,18 @@ function update(json, year, svgType, quantizeType) {
             return decideColor(d);
         })
         .style("stroke", "#000").style("stroke-width", .5);
-        d3.selectAll("svg").attr("class", "BuPu");  
+        d3.selectAll("svg").attr("class", colorscheme);
 }
 
 $("input[type='text']").on("click", function () {
     $(this).select();
 });
 
+
 d3.select("select").on("change", function() {
     d3.selectAll("svg").attr("class", this.value);
+    colorscheme = this.value;
+    $("#embedurl").val('<iframe scrolling = "no" width="660" height="515" src="http://statvis-21833.onmodulus.net/' + embedUrl +  '/' + colorscheme + '" frameborder="0" allowfullscreen></iframe>');
 });
+
+$("#embedurl").val('<iframe scrolling = "no" width="660" height="515" src="http://statvis-21833.onmodulus.net/' + embedUrl +  '/Blues' + '" frameborder="0" allowfullscreen></iframe>');

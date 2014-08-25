@@ -1,0 +1,15 @@
+extends ../mapembedlayout
+block content
+    script.
+      var datar = !{JSON.stringify(data)};
+      var field = !{JSON.stringify(datafield)};
+      var year = !{JSON.stringify(year)};
+      var colorscheme = !{JSON.stringify(colorscheme)};
+      var embedUrl = !{JSON.stringify(embedUrl)};
+    .title
+      p=title
+    #map.embedmap
+    .embedfooter
+      p Virostatiq.com
+
+    script(src='/javascripts/maps/crimemapClient.js')

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var elections = require ("../models/elections").Election;
-var geo = require ("../models/crime").Geo;
+var geo = require ("../models/geo").Geo;
 var fs = require("fs");
 
 router.get('/', function(req, res) {
@@ -100,7 +100,7 @@ router.get('/zemljevid/okraji/eu/:id', function(req, res) {
                                 datafield: field,
                                 embedUrl : 'volitve/zemljevid/okraji/eu/' + field,
                                 year : 1999,
-                                colorscheme : "Blues"
+                                colorscheme : "Purples"
                             });
                     }
                     else {
@@ -159,7 +159,7 @@ router.get('/zemljevid/okraji/eu/:id/:color', function(req, res) {
                                 datafield: field,
                                 embedUrl : 'volitve/zemljevid/okraji/eu/' + field,
                                 year : 1999,
-                                colorscheme : "Blues"
+                                colorscheme : "Purples"
                             });
                     }
                     else {

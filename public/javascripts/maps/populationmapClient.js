@@ -1,22 +1,18 @@
 console.log (year);
 console.log (field);
-console.log (colorscheme);
+console.log (datar);
 console.log (embedUrl);
 var max,min;
 
-if (year > 2007) {
-    max = d3.max(datar.features, function(d) { return +d.properties[field][year-2008].rate;} );
-    min = d3.min(datar.features, function(d) { return +d.properties[field][year-2008].rate;} );
-}
-else {
-    max = d3.max(datar.features, function(d) { return +d.properties.data[field].relative;} );
-    min = d3.min(datar.features, function(d) { return +d.properties.data[field].relative;} );
-}
 
-console.log (min + " / " + max);
-  var pad = d3.format("05d"),
-      quantizeCB = d3.scale.quantile().domain([min, max]).range(d3.range(9));
-      
+    //max = d3.max(datar.features, function(d) { return +d.properties.splosno[field];} );
+    //min = d3.min(datar.features, function(d) { return +d.properties.splosno[field];} );
+
+min = 0;
+max = 10;
+
+console.log (max);
+
 var quantize = d3.scale.quantize()
     .domain([min, max])
     .range(d3.range(9).map(function(i) { return "q" + i + "-9"; }));
@@ -32,7 +28,9 @@ update(datar, year, countries, "normal");
 
 
 function decideColor(geo) {
-    return  quantize(geo.properties.data[field].relative);
+    console.log (geo);
+	if (geo.properties[field])    return quantize(geo.properties[field].data[0].rate);
+	else return 0;
 }
 
 function update(json, year, svgType, quantizeType) {
@@ -43,7 +41,7 @@ function update(json, year, svgType, quantizeType) {
             return parseInt(d);
         });
         tooltip.classed("hidden", false).attr("style", "left:" + (mouse[0] + 25) + "px;top:" + mouse[1] + "px").html(function () {
-            return d.properties.unitName + " " + d.properties.data[field].relative;
+			return d.properties.UE_IME;
         });
         d3.select("#charttitle").selectAll("p").remove();
         d3.select("#charttitle").append("p").text("Upravna enota: " + d.properties.UE_IME);
@@ -54,18 +52,19 @@ function update(json, year, svgType, quantizeType) {
         tooltip.classed("hidden", true);
         d3.select(this).style("stroke-width", 1).style("stroke-width", 0.5);
     })
+        .attr("class", "RdYlGn")
         .attr("class", function(d) {
-			
+
             return decideColor(d);
         })
         .style("stroke", "#000").style("stroke-width", .5);
-        
-    d3.selectAll("svg").attr("class", colorscheme);    
+        d3.selectAll("svg").attr("class", colorscheme);
 }
 
 $("input[type='text']").on("click", function () {
     $(this).select();
 });
+
 
 d3.select("select").on("change", function() {
     d3.selectAll("svg").attr("class", this.value);

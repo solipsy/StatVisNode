@@ -54,6 +54,20 @@ div.tooltip {
     margin-top:1em;
 }
 
+.links {
+    float:left;
+    width: 100%;
+    font-size: 1.4em;
+    color:black;
+    margin-top:2em;	
+}
+
+.navlink {
+	float:left;
+	margin-left: 20px;
+	font-size: 0.8em;
+}
+
 .embedmap {
     border:1px solid #f1f1f1;
 }
@@ -68,4 +82,33 @@ div.tooltip {
     float:left;
     width:200px;
     height:150px;
+    margin-top:20px;
 }
+
+.minidetails {
+    float:left;
+    width:100%;
+}
+
+#map {
+    overflow:hidden;
+}
+
+#chart {
+    overflow:hidden;
+    margin-top:30px;
+}
+
+.line {
+  fill: none;
+  stroke-width: 2.5px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+

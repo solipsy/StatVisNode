@@ -1,0 +1,46 @@
+extends ../layout
+
+
+block content
+  script.
+    var datar = !{JSON.stringify(data)};
+    var field = !{JSON.stringify(datafield)};
+    var year = !{JSON.stringify(year)};
+    var embedUrl = !{JSON.stringify(embedUrl)};
+    var colorscheme = !{JSON.stringify(colorscheme)};
+    var geodata = !{JSON.stringify(geoData)};
+  br
+  br
+  br
+  .row.col-lg-6.col-sm-12
+    #chart
+  .row.col-lg-6.col-sm-12.info
+    .title
+        p= title
+    .infotext
+        p Prekopirajte spodnjo kodo v blog ali spletno stran in prikazal se bo zemljevid!
+    .colorselect
+        p Izberite barvo
+        select
+            optgroup(label="Barvne sheme")
+                option(value="purple") Vijola
+                option(value="blue") Modra
+                option(value="steelblue" selected) Svetlomodra
+                option(value="darkorange") Oranžna
+                option(value="red") Rdeča
+                option(value="dimgray") Siva
+                option(value="forestgreen") Zelena
+                option(value="goldenrod") Zlata
+                option(value="hotpink") Rožnata
+                option(value="greenyellow") Rumenozelena
+                option(value="lightseagreen") Svetlo morsko zelena
+                option(value="yellow") Rumena
+                option(value="black") Črna
+    .embed
+        form
+            input#embedurl.embed(type="text",name="whatever")
+    .links#links
+      p Občine
+  script(src='/javascripts/charts/populationchartClient.js')
+
+

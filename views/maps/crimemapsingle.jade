@@ -6,8 +6,6 @@ block content
     var datar = !{JSON.stringify(data)};
     var field = !{JSON.stringify(datafield)};
     var year = !{JSON.stringify(year)};
-    var embedUrl = !{JSON.stringify(embedUrl)};
-    var colorscheme = !{JSON.stringify(colorscheme)};
   br
   br
   br
@@ -15,7 +13,7 @@ block content
     #map
   .row.col-lg-6.col-sm-12.info
     .title
-        p= title
+        p Tukaj bo naslov
     .infotext
         p Prekopirajte spodnjo kodo v blog ali spletno stran in prikazal se bo zemljevid!
     .colorselect
@@ -42,7 +40,7 @@ block content
                 option(value="YlOrBr") Oranžno rumena
     .embed
         form
-            input#embedurl.embed(type="text",name="whatever")
-  script(src='/javascripts/maps/crimemapClient.js')
+            input.embed(type="text",name="whatever",value="#{embed}")
+  script(src='/javascripts/maps/crimemapsingleClient.js')
 
 

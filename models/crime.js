@@ -16,16 +16,11 @@ var regionSchema = mongoose.Schema({
     robberyYears : Array
 });
 
-var geoSchema = mongoose.Schema ({
-    type: String,
-    subtype: String,
-    data : mongoose.Schema.Types.Mixed
-});
+
 
 var region = mongoose.model("Region", regionSchema, "crime");
-var geo = mongoose.model ("Geo", geoSchema, "geo");
+
 
 module.exports = {
-    Region : region,
-    Geo : geo
+    Region : region
 };

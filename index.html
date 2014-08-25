@@ -6,6 +6,12 @@
         <title>New Web Project</title>
     </head>
     <body>
-    <iframe width="660" height="515" src="//localhost:3000/volitve/zemljevid/okraji/eu/SDS/Blues" frameborder="0" allowfullscreen></iframe>
+    <script>
+    	var array = [{a: 1, b: 2}, {a : "d", b: "c"}, {a : "marko", b: "e"}, 666];
+		var obj = array.filter(function ( obj ) {
+		    return obj.a === "marko";
+		})[0];
+		console.log (obj);
+    </script>
     </body>
 </html>
