@@ -2,7 +2,7 @@ console.log (year);
 console.log (field);
 console.log (datar);
 console.log (embedUrl);
-var max,min;
+var max = 0,min = 100000000;
 
 
     //max = d3.max(datar.features, function(d) { return +d.properties.splosno[field];} );
@@ -10,8 +10,25 @@ var max,min;
 
 min = 0;
 max = 10;
+getDomains();
 
 console.log (max);
+
+function getDomains() {
+    $.each(datar.features, function (i, d) {
+        var rates = d.properties[field].data.map(function (n) {
+            return n.rate;
+        });
+        var lmin = Math.min.apply(null, rates);
+        var lmax = Math.max.apply(null, rates);
+        d.min = lmin;
+        d.max = lmax;
+        //console.log (d);
+        if (lmin < min ) min = lmin;
+        if (lmax > max ) max = lmax;
+    });
+    //console.log (years);
+}
 
 var quantize = d3.scale.quantize()
     .domain([min, max])
@@ -28,23 +45,22 @@ update(datar, year, countries, "normal");
 
 
 function decideColor(geo) {
-    console.log (geo);
 	if (geo.properties[field])    return quantize(geo.properties[field].data[0].rate);
 	else return 0;
 }
 
 function update(json, year, svgType, quantizeType) {
     svgType.selectAll("path").on("click", function(d) {
-
+        console.log (d);
     }).on("mousemove", function(d) {
         var mouse = d3.mouse(svg.node()).map(function(d) {
             return parseInt(d);
         });
         tooltip.classed("hidden", false).attr("style", "left:" + (mouse[0] + 25) + "px;top:" + mouse[1] + "px").html(function () {
-			return d.properties.UE_IME;
+			return d.properties.IME;
         });
         d3.select("#charttitle").selectAll("p").remove();
-        d3.select("#charttitle").append("p").text("Upravna enota: " + d.properties.UE_IME);
+        d3.select("#charttitle").append("p").text("Upravna enota: " + d.properties.IME);
         d3.select("#charttitle").append("p").attr("class", "subtitle").text("Trend gibanja kriminalnih dejanj / 10.000 preb.");
         d3.select(this).style("stroke-width", 1).style("stroke-width", 1);
 
@@ -73,3 +89,11 @@ d3.select("select").on("change", function() {
 });
 
 $("#embedurl").val('<iframe scrolling = "no" width="660" height="515" src="http://statvis-21833.onmodulus.net/' + embedUrl +  '/Blues' + '" frameborder="0" allowfullscreen></iframe>');
+
+Array.prototype.max = function() {
+    return Math.max.apply(null, this);
+};
+
+Array.prototype.min = function() {
+    return Math.min.apply(null, this);
+};

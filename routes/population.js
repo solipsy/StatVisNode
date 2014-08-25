@@ -26,11 +26,13 @@ router.get('/zemljevid/:field', function(req, res) {
 
                     for (var g = 0; g < obcGeo.features.length; g++) {
                         //console.log (obcGeo.features[g].properties.UE_IME);
-                        var imeGeo = obcGeo.features[g].properties.UE_IME;
+                        var imeGeo = obcGeo.features[g].properties.IME;
+                        //console.log (imeGeo);
                         for (var d = 0; d < datadocs.length; d++) {
                             var dd = JSON.parse(JSON.stringify(datadocs[d]));
                             var imeData = dd.name;
                             if (imeGeo == imeData) {
+                                //console.log (imeData);
                                 //obcGeo.features[g].properties = {};
                                 obcGeo.features[g].properties[field] = dd[field];
                              
@@ -61,8 +63,9 @@ router.get('/zemljevid/:field', function(req, res) {
 
 
 
-router.get('/grafikon/:obcina', function(req, res) {
+router.get('/grafikon/:category/:obcina', function(req, res) {
 	var obcina = req.params.obcina;
+    var category = req.params.category;
 	
     geo.findOne({subtype : "stat_obcine"}, function(err, geodocs) {
         if(!err) {
@@ -81,10 +84,11 @@ router.get('/grafikon/:obcina', function(req, res) {
 
                 res.render ("charts/populationchart",
                     {
-                        title: "Prebivalstvo v Sloveniji, tujci v " + obcina,
+                        title: "Prebivalstvo v Sloveniji, " + category + " v " + obcina,
                         data: found,
                         embed : '<iframe width="660" height="515" src="//localhost:3000/crime/viz" frameborder="0" allowfullscreen></iframe>',
                         datafield: obcina,
+                        category: category,
                         year : 1999,
                         embedUrl : 'prebivalstvo/zemljevid/' + obcina,
                         colorscheme : "Purples",

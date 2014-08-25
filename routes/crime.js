@@ -60,7 +60,7 @@ router.get('/zemljevid/okraj/:name', function(req, res) {
 router.get('/zemljevid/splosno/:id', function(req, res) {
     var field = req.params.id;
 
-    geo.findOne({subtype : "stat_obcine"}, function(err, geodocs) {
+    geo.findOne({subtype : "stat_upravne"}, function(err, geodocs) {
         if(!err) {
             region.find({}, function(err, datadocs) {
                 if(!err) {
@@ -104,7 +104,7 @@ router.get('/zemljevid/splosno/:id/:color', function(req, res) {
     var field = req.params.id;
     var colorscheme = req.params.color;
 
-    geo.findOne({subtype : "stat_obcine"}, function(err, geodocs) {
+    geo.findOne({subtype : "stat_upravne"}, function(err, geodocs) {
         if(!err) {
             region.find({}, function(err, datadocs) {
                 if(!err) {
@@ -148,7 +148,7 @@ router.get('/zemljevid/letno/:id/:year', function(req, res) {
     var field = req.params.id;
     var year = req.params.year;
 
-    geo.findOne({subtype : "stat_obcine"}, function(err, geodocs) {
+    geo.findOne({subtype : "stat_upravne"}, function(err, geodocs) {
         if(!err) {
             region.find({}, function(err, datadocs) {
                 if(!err) {
@@ -193,7 +193,7 @@ router.get('/zemljevid/letno/:id/:year/:color', function(req, res) {
     var year = req.params.year;
     var color = req.params.color;
 
-    geo.findOne({subtype : "stat_obcine"}, function(err, geodocs) {
+    geo.findOne({subtype : "stat_upravne"}, function(err, geodocs) {
         if(!err) {
             region.find({}, function(err, datadocs) {
                 if(!err) {
@@ -236,7 +236,7 @@ router.get('/zemljevid/letno/:id/:year/:color', function(req, res) {
 //multiples
 router.get('/slicice/letno/:id', function(req, res) {
     var field = req.params.id;
-    geo.findOne({subtype : "stat_obcine"}, function(err, geodocs) {
+    geo.findOne({subtype : "stat_upravne"}, function(err, geodocs) {
         if(!err) {
             region.find({}, function(err, datadocs) {
                 if(!err) {

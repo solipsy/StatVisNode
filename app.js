@@ -16,8 +16,8 @@ var elections = require('./routes/elections');
 var app = express();
 
 //defs
-mongoose.connect('mongodb://localhost/SloStat');
-//mongoose.connect('mongodb://virostatiq:cheeba23@proximus.modulusmongo.net:27017/juNor7ed');
+//mongoose.connect('mongodb://localhost/SloStat');
+mongoose.connect('mongodb://virostatiq:cheeba23@proximus.modulusmongo.net:27017/juNor7ed');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {

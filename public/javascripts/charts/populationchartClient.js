@@ -1,8 +1,13 @@
 console.log (year);
 console.log (field);
+console.log (category);
 console.log (datar);
 console.log (embedUrl);
 console.log (geodata);
+
+if (typeof(d3) == 'undefined') { console.log("d3 not loaded") }
+else console.log ("d3 loaded");
+
 var margin = {top: 20, right: 20, bottom: 30, left: 50};
 var svg = d3.select("#chart").append("svg")
     .attr ("height", "320px")
@@ -22,12 +27,12 @@ var linksDiv = d3.select("#links");
 
 geodata.features.forEach(function(d) {
 	linksDiv.append("a")
-		.attr("href", "http://localhost:4730/prebivalstvo/grafikon/" + d.properties.UE_IME)
+		.attr("href", "http://localhost:4730/prebivalstvo/grafikon/" + category + "/" + d.properties.IME)
 		.attr("class", "navlink")
-		.text(d.properties.UE_IME);
+		.text(d.properties.IME);
 });
 
-datar.tujci.data.forEach(function (d) {
+datar[category].data.forEach(function (d) {
 	d.date = parseDate(d.date);
 	d.rate = +d.rate;
 });
@@ -39,8 +44,8 @@ var x = d3.time.scale()
 var y = d3.scale.linear()
     .range([height, 0]);
 
-x.domain(d3.extent(datar.tujci.data, function(d) { return d.date; }));
-y.domain(d3.extent(datar.tujci.data, function(d) { return d.rate; }));
+x.domain(d3.extent(datar[category].data, function(d) { return d.date; }));
+y.domain(d3.extent(datar[category].data, function(d) { return d.rate; }));
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -59,25 +64,25 @@ var tooltip = d3.select("#map").append("div").attr("class", "tooltip");
 
 svg.append("g")
   .attr("class", "x axis")
-  .attr("transform", "translate(30," + (height + 20) + ")")
+  .attr("transform", "translate(35," + (height + 20) + ")")
   .call(xAxis);
   
 svg.append("g")
   .attr("class", "y axis")
-  .attr("transform", "translate(30,20)")
+  .attr("transform", "translate(35,20)")
   .call(yAxis)
 .append("text")
   .attr("transform", "rotate(-90)")
   .attr("y", 6)
   .attr("dy", ".71em")
   .style("text-anchor", "end")
-  .text("% tujcev v regiji");  
+  .text("% tujcev v občini");
 
 chart.append("path")
 	.attr("class", "line")
 	.attr("stroke", "steelblue")
-	.attr("transform", "translate(30,20)")
-	.attr("d", line(datar.tujci.data));
+	.attr("transform", "translate(35,20)")
+	.attr("d", line(datar[category].data));
 
 
 

@@ -10,3 +10,5 @@ mongorestore -h proximus.modulusmongo.net -u virostatiq -p cheeba23 --authentica
 mongorestore C:\data\db\SloStat
 
 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
+
+mongodump --dbpath F:\web\MongoData\db  -d StatVis  -o F:\web\MongoData\db\mongodump
