@@ -1,14 +1,25 @@
 MONGO URI
 mongodb://solipsy:cheeba23@proximus.modulusmongo.net:27017/juNor7ed
 MONGO CONSOLE
-mongo proximus.modulusmongo.net:27017/juNor7ed -u <user> -p <pass>
+mongo proximus.modulusmongo.net:27017/juNor7ed -u virostatiq -p cheeba23
 
 
-mongorestore -h proximus.modulusmongo.net -u virostatiq -p cheeba23 --authenticationDatabase juNor7ed --db juNor7ed F:
-\web\MongoData\db\mongodump\SloStat
+izvoz baze:
+mongodump -h localhost:27017  -d SloStat  -o F:\web\MongoData\db\mongodump
+
+upload na modulus:
+mongorestore -h proximus.modulusmongo.net -u virostatiq -p cheeba23 --authenticationDatabase juNor7ed --db juNor7ed F:\web\MongoData\db\mongodump\SloStat
 
 mongorestore C:\data\db\SloStat
 
 C:\Users\plahutam\Documents\AptanaWorkspace\StatVis
 
-mongodump --dbpath F:\web\MongoData\db  -d StatVis  -o F:\web\MongoData\db\mongodump
+
+
+
+
+
+
+
+
+

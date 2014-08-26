@@ -5,6 +5,8 @@ console.log (datar);
 console.log (embedUrl);
 console.log (geodata);
 
+if (category.length == 1) category = category[0];
+
 if (typeof(d3) == 'undefined') { console.log("d3 not loaded") }
 else console.log ("d3 loaded");
 
@@ -27,7 +29,7 @@ var linksDiv = d3.select("#links");
 
 geodata.features.forEach(function(d) {
 	linksDiv.append("a")
-		.attr("href", "http://localhost:4730/prebivalstvo/grafikon/" + category + "/" + d.properties.IME)
+		.attr("href", "http://statvis-21833.onmodulus.net/prebivalstvo/grafikon/" + category + "/" + d.properties.IME)
 		.attr("class", "navlink")
 		.text(d.properties.IME);
 });

@@ -16,6 +16,7 @@ console.log (max);
 
 function getDomains() {
     $.each(datar.features, function (i, d) {
+        //console.log (d);
         var rates = d.properties[field].data.map(function (n) {
             return n.rate;
         });

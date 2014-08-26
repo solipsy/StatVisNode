@@ -68,13 +68,16 @@ router.get('/zemljevid/okraji/eu/:id/:color', function(req, res) {
     });
 });
 
-router.get('/zemljevid/okraji/eu/:id', function(req, res) {
+router.get('/zemljevid/okraji/:type/:id', function(req, res) {
     var field = req.params.id;
     var color = req.params.color;
+    var type = req.params.type;
+    var year = req.params.year;
+
 
     geo.findOne({subtype : "volitve_okraji"}, function(err, geodocs) {
         if(!err) {
-            elections.find({}, function(err, datadocs) {
+            elections.find().and([{electionType: type}]).exec (function(err, datadocs) {
                 if(!err) {
                     var obcGeo = geodocs.data;
                     obcGeo = JSON.parse(obcGeo);

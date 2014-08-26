@@ -3,6 +3,10 @@ console.log (field);
 console.log (colorscheme);
 console.log (embedUrl);
 var max,min;
+var date = new Date();
+var time = date.getTime();
+var idFrame = "a" + time;
+var scripti = '<script>function setIframeSrc() {var s = "http://statvis-21833.onmodulus.net/"' + embedUrl + '/' + colorscheme + ';var iframe1=document.getElementById(idFrame);if ( -1 == navigator.userAgent.indexOf("MSIE") ) {iframe1.src = s;} else {iframe1.location = s;}} setTimeout(setIframeSrc, 5);</script>';
 
 if (year > 2007) {
     max = d3.max(datar.features, function(d) { return +d.properties[field][year-2008].rate;} );
@@ -70,7 +74,7 @@ $("input[type='text']").on("click", function () {
 d3.select("select").on("change", function() {
     d3.selectAll("svg").attr("class", this.value);
     colorscheme = this.value;
-    $("#embedurl").val('<iframe scrolling = "no" width="660" height="515" src="http://statvis-21833.onmodulus.net/' + embedUrl +  '/' + colorscheme + '" frameborder="0" allowfullscreen></iframe>');
+    $("#embedurl").val('<iframe id = "' + idFrame + '" scrolling = "no" width="660" height="515" src="http://statvis-21833.onmodulus.net/' + embedUrl +  '/' + colorscheme + '" frameborder="0" allowfullscreen></iframe>' + scripti);
 });
 
-$("#embedurl").val('<iframe scrolling = "no" width="660" height="515" src="http://statvis-21833.onmodulus.net/' + embedUrl +  '/Blues' + '" frameborder="0" allowfullscreen></iframe>');
+$("#embedurl").val('<iframe id = "' + idFrame + '" scrolling = "no" width="660" height="515" src="http://statvis-21833.onmodulus.net/' + embedUrl +  '/Blues' + '" frameborder="0" allowfullscreen></iframe>' + scripti);

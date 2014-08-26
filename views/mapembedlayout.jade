@@ -7,8 +7,12 @@ html
         link(rel='stylesheet', href='/bootstrap/css/cosmo.bootstrap.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
         link(rel='stylesheet', href='/stylesheets/colorbrewer.css')
-        script(src='/javascripts/d3.v3.min.js')
-        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+        script.
+          if (typeof(d3) == 'undefined') { document.write('<script src = "/javascripts/d3.v3.min.js"><\/script>'); }
+        script.
+          window.jQuery || document.write('<script src="/javascripts/jquery-1.11.0.min.js"><\/script>')
+
     body
-        .container
-            block content
+      .container
+          block content
+

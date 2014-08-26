@@ -23,17 +23,17 @@ router.get('/zemljevid/:field', function(req, res) {
                 if(!err) {
                     var obcGeo = geodocs.data;
                     obcGeo = JSON.parse(obcGeo);
-
+                    //console.log (datadocs);
                     for (var g = 0; g < obcGeo.features.length; g++) {
                         //console.log (obcGeo.features[g].properties.UE_IME);
                         var imeGeo = obcGeo.features[g].properties.IME;
-                        //console.log (imeGeo);
+                        //console.log (obcGeo.features[g].properties);
                         for (var d = 0; d < datadocs.length; d++) {
                             var dd = JSON.parse(JSON.stringify(datadocs[d]));
                             var imeData = dd.name;
                             if (imeGeo == imeData) {
-                                //console.log (imeData);
-                                //obcGeo.features[g].properties = {};
+                                //console.log (dd[field]);
+                                obcGeo.features[g].properties = {};
                                 obcGeo.features[g].properties[field] = dd[field];
                              
                             }
@@ -66,14 +66,19 @@ router.get('/zemljevid/:field', function(req, res) {
 router.get('/grafikon/:category/:obcina', function(req, res) {
 	var obcina = req.params.obcina;
     var category = req.params.category;
-	
+
+    //detect if obcina is array
+    if (category.indexOf(",") >= 0) {
+        category = category.split(",");
+    }
+    else category = [category];
+    console.log (category);
+
     geo.findOne({subtype : "stat_obcine"}, function(err, geodocs) {
         if(!err) {
-        	
             var obcGeo = geodocs.data;
             obcGeo = JSON.parse(obcGeo);
-            
-        	
+
             population.find({}, function(err, datadocs) {
                 if(!err) {
 				var found = datadocs.filter(function ( obj ) {
@@ -82,7 +87,7 @@ router.get('/grafikon/:category/:obcina', function(req, res) {
 				})[0];
                   
 
-                res.render ("charts/populationchart",
+                res.render (category.length == 1 ? "charts/populationchart" : "charts/populationmultiplechart",
                     {
                         title: "Prebivalstvo v Sloveniji, " + category + " v " + obcina,
                         data: found,

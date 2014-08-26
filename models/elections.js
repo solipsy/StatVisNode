@@ -4,7 +4,7 @@ var electionSchema = mongoose.Schema({
 	geoType : String,
 	unitName : String,
 	electionType : String,
-	year : Number,
+	year : {type: Number, index : true},
 	turnover : Number,
 	data : mongoose.Schema.Types.Mixed,
 	shortName : String
