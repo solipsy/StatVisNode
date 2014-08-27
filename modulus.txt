@@ -8,7 +8,7 @@ izvoz baze:
 mongodump -h localhost:27017  -d SloStat  -o F:\web\MongoData\db\mongodump
 
 upload na modulus:
-mongorestore -h proximus.modulusmongo.net -u virostatiq -p cheeba23 --authenticationDatabase juNor7ed --db juNor7ed F:\web\MongoData\db\mongodump\SloStat
+mongorestore -h proximus.modulusmongo.net -u virostatiq -p cheeba23 --authenticationDatabase juNor7ed --db juNor7ed F:\web\MongoData\db\mongodump\SloStat --drop
 
 mongorestore C:\data\db\SloStat
 

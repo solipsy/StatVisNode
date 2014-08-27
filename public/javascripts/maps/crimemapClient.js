@@ -2,6 +2,7 @@ console.log (year);
 console.log (field);
 console.log (datar);
 console.log (embedUrl);
+console.log (navigation);
 var max,min;
 
 if (year > 2007) {
@@ -18,7 +19,7 @@ else {
     min = 0;
 }
 
-console.log (max);
+
 
 var quantize = d3.scale.quantize()
     .domain([min, max])
@@ -68,6 +69,53 @@ function update(json, year, svgType, quantizeType) {
         .style("stroke", "#000").style("stroke-width", .5);
         d3.selectAll("svg").attr("class", colorscheme);
 }
+
+console.log (navigation);
+//links
+var linksDiv = d3.select("#links");
+var yearLinksDiv = d3.select("#yearLinks");
+if (navtype == "letno") insertYearlyLinks()
+else insertcategoryLinks();
+
+function insertcategoryLinks() {
+    navigation.splosno.forEach(function(d) {
+        linksDiv.append("a")
+            .attr("href", "http://localhost:4730/kriminal/zemljevid/splosno/" + d.path)
+            .attr("class", "navlink")
+            .text(d.title);
+    });
+}
+
+function insertYearlyLinks() {
+    yearLinksDiv.append ("p").text("Leta")
+    yearLinksDiv.selectAll("a").data(navigation.years).enter()
+        .append ("a")
+        .attr("class", "navlink")
+        .text (function (d) {return d})
+        .attr("href", function (d) {"http://localhost:4730/kriminal/zemljevid/letno/" + d.path + "/" + year})
+        .on ("click", function (d) {
+
+            year = d;
+            linksDiv.selectAll("a").remove();
+            navigation.letno.forEach(function(d) {
+                linksDiv.append("a")
+                    .attr("href", "http://localhost:4730/kriminal/zemljevid/letno/" + d.path + "/" + year)
+                    .attr("class", "navlink")
+                    .text(d.title);
+            });
+        })
+    ;
+
+    navigation.letno.forEach(function(d) {
+        linksDiv.append("a")
+            .attr("href", "http://localhost:4730/kriminal/zemljevid/letno/" + d.path + "/" + year)
+            .attr("class", "navlink")
+            .text(d.title);
+    });
+}
+
+
+
 
 $("input[type='text']").on("click", function () {
     $(this).select();

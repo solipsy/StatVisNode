@@ -10,20 +10,26 @@ var users = require('./routes/users');
 var crime = require('./routes/crime');
 var population = require('./routes/population');
 var elections = require('./routes/elections');
+var debtors = require('./routes/taxdebtors');
+var APPVAR = require("./appConst.js");
 
 //var jsdom = require ("jsdom");
 //var d3 = require("d3");
 var app = express();
 
-//defs
-//mongoose.connect('mongodb://localhost/SloStat');
-mongoose.connect('mongodb://virostatiq:cheeba23@proximus.modulusmongo.net:27017/juNor7ed');
+console.log ("project ID: " + process.env.PROJECT_ID);
+if (process.env.PROJECT_ID == undefined) {
+    APPVAR.environment.url = APPVAR.environment.local;
+    mongoose.connect('mongodb://localhost/SloStat');
+}
+else {
+    APPVAR.environment.url = APPVAR.environment.production;
+    mongoose.connect('mongodb://virostatiq:cheeba23@proximus.modulusmongo.net:27017/juNor7ed');
+}
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function callback () {
-    // yay!
-});
-console.log ("project ID: " + process.env.PROJECT_ID);
+db.once('open', function callback () {});
 
 
 
@@ -43,6 +49,7 @@ app.use('/users', users);
 app.use('/kriminal', crime);
 app.use('/volitve', elections);
 app.use('/prebivalstvo', population);
+app.use('/durs', debtors);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

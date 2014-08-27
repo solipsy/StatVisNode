@@ -5,7 +5,7 @@
 2 info using npm@1.4.9
 3 info using node@v0.10.28
 4 verbose readDependencies using package.json deps
-5 verbose install where, deps [ 'c:\\Users\\solipsy\\WebstormProjects\\StatVis',
+5 verbose install where, deps [ 'c:\\Users\\solipsy\\WebstormProjects\\StatVisNode',
 5 verbose install   [ 'express',
 5 verbose install     'static-favicon',
 5 verbose install     'morgan',
@@ -13,61 +13,247 @@
 5 verbose install     'body-parser',
 5 verbose install     'debug',
 5 verbose install     'jade',
-5 verbose install     'mongoose' ] ]
+5 verbose install     'mongoose',
+5 verbose install     'node-constants',
+5 verbose install     'underscore' ] ]
 6 info preinstall StatVis@0.0.1
 7 verbose readDependencies using package.json deps
-8 verbose already installed skipping express@~4.2.0 c:\Users\solipsy\WebstormProjects\StatVis
-9 verbose already installed skipping static-favicon@~1.0.0 c:\Users\solipsy\WebstormProjects\StatVis
-10 verbose already installed skipping morgan@~1.0.0 c:\Users\solipsy\WebstormProjects\StatVis
-11 verbose already installed skipping cookie-parser@~1.0.1 c:\Users\solipsy\WebstormProjects\StatVis
-12 verbose already installed skipping body-parser@~1.0.0 c:\Users\solipsy\WebstormProjects\StatVis
-13 verbose already installed skipping debug@~0.7.4 c:\Users\solipsy\WebstormProjects\StatVis
-14 verbose already installed skipping jade@~1.3.0 c:\Users\solipsy\WebstormProjects\StatVis
-15 verbose already installed skipping mongoose@~3.8.14 c:\Users\solipsy\WebstormProjects\StatVis
-16 silly resolved []
-17 info build c:\Users\solipsy\WebstormProjects\StatVis
-18 verbose linkStuff [ false, false, false, 'c:\\Users\\solipsy\\WebstormProjects' ]
-19 info linkStuff StatVis@0.0.1
-20 verbose linkBins StatVis@0.0.1
-21 verbose linkMans StatVis@0.0.1
-22 verbose rebuildBundles StatVis@0.0.1
-23 verbose rebuildBundles [ '.bin',
-23 verbose rebuildBundles   'body-parser',
-23 verbose rebuildBundles   'contextify',
-23 verbose rebuildBundles   'cookie-parser',
-23 verbose rebuildBundles   'debug',
-23 verbose rebuildBundles   'express',
-23 verbose rebuildBundles   'jade',
-23 verbose rebuildBundles   'jsdom-nogyp',
-23 verbose rebuildBundles   'mongoose',
-23 verbose rebuildBundles   'morgan',
-23 verbose rebuildBundles   'static-favicon' ]
-24 verbose rebuild bundle c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify
-25 info build c:\Users\solipsy\WebstormProjects\StatVis\node_modules\contextify
-26 info preinstall contextify@0.1.8
-27 verbose linkStuff [ false,
-27 verbose linkStuff   false,
-27 verbose linkStuff   false,
-27 verbose linkStuff   'c:\\Users\\solipsy\\WebstormProjects\\StatVis\\node_modules' ]
-28 info linkStuff contextify@0.1.8
-29 verbose linkBins contextify@0.1.8
-30 verbose linkMans contextify@0.1.8
-31 verbose rebuildBundles contextify@0.1.8
-32 verbose rebuildBundles [ 'bindings', 'nan' ]
-33 info install contextify@0.1.8
-34 verbose unsafe-perm in lifecycle true
-35 error Error: spawn ENOENT
-35 error     at errnoException (child_process.js:998:11)
-35 error     at Process.ChildProcess._handle.onexit (child_process.js:789:34)
-36 error If you need help, you may report this *entire* log,
-36 error including the npm and node versions, at:
-36 error     <http://github.com/npm/npm/issues>
-37 error System Windows_NT 6.1.7601
-38 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
-39 error cwd c:\Users\solipsy\WebstormProjects\StatVis
-40 error node -v v0.10.28
-41 error npm -v 1.4.9
-42 error syscall spawn
-43 error code ENOENT
-44 error errno ENOENT
-45 verbose exit [ 1, true ]
+8 verbose already installed skipping express@~4.2.0 c:\Users\solipsy\WebstormProjects\StatVisNode
+9 verbose already installed skipping static-favicon@~1.0.0 c:\Users\solipsy\WebstormProjects\StatVisNode
+10 verbose already installed skipping morgan@~1.0.0 c:\Users\solipsy\WebstormProjects\StatVisNode
+11 verbose already installed skipping cookie-parser@~1.0.1 c:\Users\solipsy\WebstormProjects\StatVisNode
+12 verbose already installed skipping body-parser@~1.0.0 c:\Users\solipsy\WebstormProjects\StatVisNode
+13 verbose already installed skipping debug@~0.7.4 c:\Users\solipsy\WebstormProjects\StatVisNode
+14 verbose already installed skipping jade@~1.3.0 c:\Users\solipsy\WebstormProjects\StatVisNode
+15 verbose already installed skipping mongoose@~3.8.14 c:\Users\solipsy\WebstormProjects\StatVisNode
+16 verbose already installed skipping node-constants@* c:\Users\solipsy\WebstormProjects\StatVisNode
+17 verbose cache add [ 'underscore@*', null ]
+18 verbose cache add name=undefined spec="underscore@*" args=["underscore@*",null]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: 'underscore@*',
+19 verbose parsed url   path: 'underscore@*',
+19 verbose parsed url   href: 'underscore@*' }
+20 verbose cache add name="underscore" spec="*" args=["underscore","*"]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: '*',
+21 verbose parsed url   path: '*',
+21 verbose parsed url   href: '*' }
+22 verbose addNamed [ 'underscore', '*' ]
+23 verbose addNamed [ null, '*' ]
+24 silly lockFile 67e8a6a2-underscore underscore@*
+25 verbose lock underscore@* C:\Users\solipsy\AppData\Roaming\npm-cache\67e8a6a2-underscore.lock
+26 silly addNameRange { name: 'underscore', range: '*', hasData: false }
+27 verbose url raw underscore
+28 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
+29 verbose url resolved https://registry.npmjs.org/underscore
+30 info trying registry request attempt 1 at 21:26:22
+31 verbose etag "5HZ4VK04DAU5THJV3CIDLWKM5"
+32 http GET https://registry.npmjs.org/underscore
+33 http 200 https://registry.npmjs.org/underscore
+34 silly registry.get cb [ 200,
+34 silly registry.get   { date: 'Wed, 27 Aug 2014 19:26:25 GMT',
+34 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+34 silly registry.get     etag: '"614QZIIHHOCNL18CX3KMF1DX8"',
+34 silly registry.get     'content-type': 'application/json',
+34 silly registry.get     'cache-control': 'max-age=60',
+34 silly registry.get     'content-length': '32601',
+34 silly registry.get     'accept-ranges': 'bytes',
+34 silly registry.get     via: '1.1 varnish',
+34 silly registry.get     age: '1909',
+34 silly registry.get     'x-served-by': 'cache-fra1225-FRA',
+34 silly registry.get     'x-cache': 'HIT',
+34 silly registry.get     'x-cache-hits': '2',
+34 silly registry.get     'x-timer': 'S1409167585.545197,VS0,VE0',
+34 silly registry.get     vary: 'Accept',
+34 silly registry.get     'keep-alive': 'timeout=10, max=50',
+34 silly registry.get     connection: 'Keep-Alive' } ]
+35 silly addNameRange number 2 { name: 'underscore', range: '*', hasData: true }
+36 silly addNameRange versions [ 'underscore',
+36 silly addNameRange   [ '1.0.3',
+36 silly addNameRange     '1.0.4',
+36 silly addNameRange     '1.1.0',
+36 silly addNameRange     '1.1.1',
+36 silly addNameRange     '1.1.2',
+36 silly addNameRange     '1.1.3',
+36 silly addNameRange     '1.1.4',
+36 silly addNameRange     '1.1.5',
+36 silly addNameRange     '1.1.6',
+36 silly addNameRange     '1.1.7',
+36 silly addNameRange     '1.2.0',
+36 silly addNameRange     '1.2.1',
+36 silly addNameRange     '1.2.2',
+36 silly addNameRange     '1.2.3',
+36 silly addNameRange     '1.2.4',
+36 silly addNameRange     '1.3.0',
+36 silly addNameRange     '1.3.1',
+36 silly addNameRange     '1.3.2',
+36 silly addNameRange     '1.3.3',
+36 silly addNameRange     '1.4.0',
+36 silly addNameRange     '1.4.1',
+36 silly addNameRange     '1.4.2',
+36 silly addNameRange     '1.4.3',
+36 silly addNameRange     '1.4.4',
+36 silly addNameRange     '1.5.0',
+36 silly addNameRange     '1.5.1',
+36 silly addNameRange     '1.5.2',
+36 silly addNameRange     '1.6.0',
+36 silly addNameRange     '1.7.0' ] ]
+37 verbose addNamed [ 'underscore', '1.7.0' ]
+38 verbose addNamed [ '1.7.0', '1.7.0' ]
+39 silly lockFile 900da168-underscore-1-7-0 underscore@1.7.0
+40 verbose lock underscore@1.7.0 C:\Users\solipsy\AppData\Roaming\npm-cache\900da168-underscore-1-7-0.lock
+41 silly lockFile 0bc9860b--underscore-underscore-1-7-0-tgz https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz
+42 verbose lock https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz C:\Users\solipsy\AppData\Roaming\npm-cache\0bc9860b--underscore-underscore-1-7-0-tgz.lock
+43 verbose addRemoteTarball [ 'https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz',
+43 verbose addRemoteTarball   '6bbaf0877500d36be34ecaa584e0db9fef035209' ]
+44 info retry fetch attempt 1 at 21:26:23
+45 verbose fetch to= C:\Users\solipsy\AppData\Local\Temp\npm-12752-VnAELArv\1409167583269-0.3212648688349873\tmp.tgz
+46 http GET https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz
+47 http 200 https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz
+48 verbose tar unpack C:\Users\solipsy\AppData\Local\Temp\npm-12752-VnAELArv\1409167583269-0.3212648688349873\tmp.tgz
+49 silly lockFile 842ea924-m-cache-underscore-1-7-0-package tar://C:\Users\solipsy\AppData\Roaming\npm-cache\underscore\1.7.0\package
+50 verbose lock tar://C:\Users\solipsy\AppData\Roaming\npm-cache\underscore\1.7.0\package C:\Users\solipsy\AppData\Roaming\npm-cache\842ea924-m-cache-underscore-1-7-0-package.lock
+51 silly lockFile ef64d009-83269-0-3212648688349873-tmp-tgz tar://C:\Users\solipsy\AppData\Local\Temp\npm-12752-VnAELArv\1409167583269-0.3212648688349873\tmp.tgz
+52 verbose lock tar://C:\Users\solipsy\AppData\Local\Temp\npm-12752-VnAELArv\1409167583269-0.3212648688349873\tmp.tgz C:\Users\solipsy\AppData\Roaming\npm-cache\ef64d009-83269-0-3212648688349873-tmp-tgz.lock
+53 silly gunzTarPerm modes [ '755', '644' ]
+54 silly gunzTarPerm extractEntry package.json
+55 silly gunzTarPerm extractEntry README.md
+56 silly gunzTarPerm extractEntry LICENSE
+57 silly gunzTarPerm extractEntry underscore-min.js
+58 silly gunzTarPerm extractEntry underscore.js
+59 silly lockFile 842ea924-m-cache-underscore-1-7-0-package tar://C:\Users\solipsy\AppData\Roaming\npm-cache\underscore\1.7.0\package
+60 silly lockFile 842ea924-m-cache-underscore-1-7-0-package tar://C:\Users\solipsy\AppData\Roaming\npm-cache\underscore\1.7.0\package
+61 silly lockFile ef64d009-83269-0-3212648688349873-tmp-tgz tar://C:\Users\solipsy\AppData\Local\Temp\npm-12752-VnAELArv\1409167583269-0.3212648688349873\tmp.tgz
+62 silly lockFile ef64d009-83269-0-3212648688349873-tmp-tgz tar://C:\Users\solipsy\AppData\Local\Temp\npm-12752-VnAELArv\1409167583269-0.3212648688349873\tmp.tgz
+63 silly lockFile 0bc9860b--underscore-underscore-1-7-0-tgz https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz
+64 silly lockFile 0bc9860b--underscore-underscore-1-7-0-tgz https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz
+65 silly lockFile 900da168-underscore-1-7-0 underscore@1.7.0
+66 silly lockFile 900da168-underscore-1-7-0 underscore@1.7.0
+67 silly lockFile 67e8a6a2-underscore underscore@*
+68 silly lockFile 67e8a6a2-underscore underscore@*
+69 silly resolved [ { name: 'underscore',
+69 silly resolved     description: 'JavaScript\'s functional programming helper library.',
+69 silly resolved     homepage: 'http://underscorejs.org',
+69 silly resolved     keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+69 silly resolved     author: { name: 'Jeremy Ashkenas', email: 'jeremy@documentcloud.org' },
+69 silly resolved     repository:
+69 silly resolved      { type: 'git',
+69 silly resolved        url: 'git://github.com/jashkenas/underscore.git' },
+69 silly resolved     main: 'underscore.js',
+69 silly resolved     version: '1.7.0',
+69 silly resolved     devDependencies:
+69 silly resolved      { docco: '0.6.x',
+69 silly resolved        phantomjs: '1.9.7-1',
+69 silly resolved        'uglify-js': '2.4.x',
+69 silly resolved        eslint: '0.6.x' },
+69 silly resolved     scripts:
+69 silly resolved      { test: 'phantomjs test/vendor/runner.js test/index.html?noglobals=true && eslint underscore.js test/*.js test/vendor/runner.js',
+69 silly resolved        build: 'uglifyjs underscore.js -c "evaluate=false" --comments "/    .*/" -m --source-map underscore-min.map -o underscore-min.js',
+69 silly resolved        doc: 'docco underscore.js' },
+69 silly resolved     licenses: [ [Object] ],
+69 silly resolved     files: [ 'underscore.js', 'underscore-min.js', 'LICENSE' ],
+69 silly resolved     readme: '                       __\n                      /\\ \\                                                         __\n     __  __    ___    \\_\\ \\     __   _ __   ____    ___    ___   _ __    __       /\\_\\    ____\n    /\\ \\/\\ \\ /\' _ `\\  /\'_  \\  /\'__`\\/\\  __\\/ ,__\\  / ___\\ / __`\\/\\  __\\/\'__`\\     \\/\\ \\  /\',__\\\n    \\ \\ \\_\\ \\/\\ \\/\\ \\/\\ \\ \\ \\/\\  __/\\ \\ \\//\\__, `\\/\\ \\__//\\ \\ \\ \\ \\ \\//\\  __/  __  \\ \\ \\/\\__, `\\\n     \\ \\____/\\ \\_\\ \\_\\ \\___,_\\ \\____\\\\ \\_\\\\/\\____/\\ \\____\\ \\____/\\ \\_\\\\ \\____\\/\\_\\ _\\ \\ \\/\\____/\n      \\/___/  \\/_/\\/_/\\/__,_ /\\/____/ \\/_/ \\/___/  \\/____/\\/___/  \\/_/ \\/____/\\/_//\\ \\_\\ \\/___/\n                                                                                  \\ \\____/\n                                                                                   \\/___/\n\nUnderscore.js is a utility-belt library for JavaScript that provides\nsupport for the usual functional suspects (each, map, reduce, filter...)\nwithout extending any core JavaScript objects.\n\nFor Docs, License, Tests, and pre-packed downloads, see:\nhttp://underscorejs.org\n\nUnderscore is an open-sourced component of DocumentCloud:\nhttps://github.com/documentcloud\n\nMany thanks to our contributors:\nhttps://github.com/jashkenas/underscore/contributors\n',
+69 silly resolved     readmeFilename: 'README.md',
+69 silly resolved     bugs: { url: 'https://github.com/jashkenas/underscore/issues' },
+69 silly resolved     _id: 'underscore@1.7.0',
+69 silly resolved     _shasum: '6bbaf0877500d36be34ecaa584e0db9fef035209',
+69 silly resolved     _from: 'underscore@*',
+69 silly resolved     _resolved: 'https://registry.npmjs.org/underscore/-/underscore-1.7.0.tgz' } ]
+70 info install underscore@1.7.0 into c:\Users\solipsy\WebstormProjects\StatVisNode
+71 info installOne underscore@1.7.0
+72 info c:\Users\solipsy\WebstormProjects\StatVisNode\node_modules\underscore unbuild
+73 verbose tar unpack C:\Users\solipsy\AppData\Roaming\npm-cache\underscore\1.7.0\package.tgz
+74 silly lockFile aa774a38-tVisNode-node-modules-underscore tar://c:\Users\solipsy\WebstormProjects\StatVisNode\node_modules\underscore
+75 verbose lock tar://c:\Users\solipsy\WebstormProjects\StatVisNode\node_modules\underscore C:\Users\solipsy\AppData\Roaming\npm-cache\aa774a38-tVisNode-node-modules-underscore.lock
+76 silly lockFile 1e253e34-che-underscore-1-7-0-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\underscore\1.7.0\package.tgz
+77 verbose lock tar://C:\Users\solipsy\AppData\Roaming\npm-cache\underscore\1.7.0\package.tgz C:\Users\solipsy\AppData\Roaming\npm-cache\1e253e34-che-underscore-1-7-0-package-tgz.lock
+78 silly gunzTarPerm modes [ '755', '644' ]
+79 silly gunzTarPerm extractEntry package.json
+80 silly gunzTarPerm extractEntry README.md
+81 silly gunzTarPerm extractEntry LICENSE
+82 silly gunzTarPerm extractEntry underscore-min.js
+83 silly gunzTarPerm extractEntry underscore.js
+84 silly lockFile aa774a38-tVisNode-node-modules-underscore tar://c:\Users\solipsy\WebstormProjects\StatVisNode\node_modules\underscore
+85 silly lockFile aa774a38-tVisNode-node-modules-underscore tar://c:\Users\solipsy\WebstormProjects\StatVisNode\node_modules\underscore
+86 silly lockFile 1e253e34-che-underscore-1-7-0-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\underscore\1.7.0\package.tgz
+87 silly lockFile 1e253e34-che-underscore-1-7-0-package-tgz tar://C:\Users\solipsy\AppData\Roaming\npm-cache\underscore\1.7.0\package.tgz
+88 info preinstall underscore@1.7.0
+89 verbose readDependencies using package.json deps
+90 verbose readDependencies using package.json deps
+91 silly resolved []
+92 verbose about to build c:\Users\solipsy\WebstormProjects\StatVisNode\node_modules\underscore
+93 info build c:\Users\solipsy\WebstormProjects\StatVisNode\node_modules\underscore
+94 verbose linkStuff [ false,
+94 verbose linkStuff   false,
+94 verbose linkStuff   false,
+94 verbose linkStuff   'c:\\Users\\solipsy\\WebstormProjects\\StatVisNode\\node_modules' ]
+95 info linkStuff underscore@1.7.0
+96 verbose linkBins underscore@1.7.0
+97 verbose linkMans underscore@1.7.0
+98 verbose rebuildBundles underscore@1.7.0
+99 info install underscore@1.7.0
+100 info postinstall underscore@1.7.0
+101 info build c:\Users\solipsy\WebstormProjects\StatVisNode
+102 verbose linkStuff [ false, false, false, 'c:\\Users\\solipsy\\WebstormProjects' ]
+103 info linkStuff StatVis@0.0.1
+104 verbose linkBins StatVis@0.0.1
+105 verbose linkMans StatVis@0.0.1
+106 verbose rebuildBundles StatVis@0.0.1
+107 verbose rebuildBundles [ '.bin',
+107 verbose rebuildBundles   'body-parser',
+107 verbose rebuildBundles   'contextify',
+107 verbose rebuildBundles   'cookie-parser',
+107 verbose rebuildBundles   'debug',
+107 verbose rebuildBundles   'express',
+107 verbose rebuildBundles   'jade',
+107 verbose rebuildBundles   'jsdom-nogyp',
+107 verbose rebuildBundles   'mongoose',
+107 verbose rebuildBundles   'morgan',
+107 verbose rebuildBundles   'node-constants',
+107 verbose rebuildBundles   'static-favicon',
+107 verbose rebuildBundles   'underscore' ]
+108 verbose rebuild bundle c:\Users\solipsy\WebstormProjects\StatVisNode\node_modules\contextify
+109 info build c:\Users\solipsy\WebstormProjects\StatVisNode\node_modules\contextify
+110 info preinstall contextify@0.1.8
+111 verbose linkStuff [ false,
+111 verbose linkStuff   false,
+111 verbose linkStuff   false,
+111 verbose linkStuff   'c:\\Users\\solipsy\\WebstormProjects\\StatVisNode\\node_modules' ]
+112 info linkStuff contextify@0.1.8
+113 verbose linkBins contextify@0.1.8
+114 verbose linkMans contextify@0.1.8
+115 verbose rebuildBundles contextify@0.1.8
+116 verbose rebuildBundles [ 'bindings', 'nan' ]
+117 info install contextify@0.1.8
+118 verbose unsafe-perm in lifecycle true
+119 error Error: spawn ENOENT
+119 error     at errnoException (child_process.js:998:11)
+119 error     at Process.ChildProcess._handle.onexit (child_process.js:789:34)
+120 error If you need help, you may report this *entire* log,
+120 error including the npm and node versions, at:
+120 error     <http://github.com/npm/npm/issues>
+121 error System Windows_NT 6.1.7601
+122 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+123 error cwd c:\Users\solipsy\WebstormProjects\StatVisNode
+124 error node -v v0.10.28
+125 error npm -v 1.4.9
+126 error syscall spawn
+127 error code ENOENT
+128 error errno ENOENT
+129 verbose exit [ 1, true ]

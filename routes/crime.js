@@ -4,9 +4,15 @@ var region = require ("../models/crime").Region;
 var geo = require ("../models/geo").Geo;
 var detgeo = require ("../models/geo").DetGeo;
 var fs = require("fs");
+var APPVAR = require("../appConst.js");
 
-router.get('/', function(req, res) {
-    region.find({}, function(err, docs) {
+router.get('/api/:selector?/:field?', function(req, res) {
+    var tail = "";
+    if (req.params.field) tail = "." + req.params.field + " -_id region";
+    else tail = " -_id region";
+    var args = req.params.selector + tail;
+
+    region.find({}, args, function(err, docs) {
         if(!err) {
             res.json(200, { regions: docs });
         } else {
@@ -88,7 +94,9 @@ router.get('/zemljevid/splosno/:id', function(req, res) {
                             datafield: field,
                             year : 1999,
                             embedUrl : 'kriminal/zemljevid/splosno/' + field,
-                            colorscheme : "Purples"
+                            colorscheme : "Purples",
+                            navigation : APPVAR.navigation.crime,
+                            type : "letno"
                         });
                 } else {
                     res.json(500, { message: err });
@@ -176,7 +184,10 @@ router.get('/zemljevid/letno/:id/:year', function(req, res) {
                             datafield: field,
                             year : year,
                             embedUrl : 'kriminal/zemljevid/letno/' + field + "/" + year,
-                            colorscheme : "Purples"
+                            colorscheme : "Purples",
+                            navigation : APPVAR.navigation.crime,
+                            type : "letno"
+
                         });
                 } else {
                     res.json(500, { message: err });
@@ -278,6 +289,7 @@ router.get('/slicice/letno/:id', function(req, res) {
 router.get('/slicice/vrste/:color?', function(req, res) {
 	var color = req.params.color;
 	if (!color) color = "Reds"
+    console.log (APPVAR.environment.url);
     
     geo.findOne({subtype : "stat_upravne"}, function(err, geodocs) {
         if(!err) {
