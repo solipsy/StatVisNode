@@ -275,4 +275,47 @@ router.get('/slicice/letno/:id', function(req, res) {
     });
 });
 
+router.get('/slicice/vrste/:color?', function(req, res) {
+	var color = req.params.color;
+	if (!color) color = "Reds"
+    
+    geo.findOne({subtype : "stat_upravne"}, function(err, geodocs) {
+        if(!err) {
+            region.find({}, function(err, datadocs) {
+                if(!err) {
+                    var obcGeo = geodocs.data;
+                    obcGeo = JSON.parse(obcGeo);
+
+                    for (var g = 0; g < obcGeo.features.length; g++) {
+                        //console.log (obcGeo.features[g].properties.UE_IME);
+                        var imeGeo = obcGeo.features[g].properties.UE_IME;
+                        for (var d = 0; d < datadocs.length; d++) {
+                            var imeData = datadocs[d].region;
+                            var dd = JSON.parse(JSON.stringify(datadocs[d]));
+                            if (imeGeo == imeData) {
+                                obcGeo.features[g].properties.splosno = {};
+                                obcGeo.features[g].properties.splosno = dd.splosno;
+                            }
+                        }
+                    }
+
+                    res.render ("maps/crimemapmultiplestypes",
+                        {
+                            title: "Kriminal v Sloveniji po vrstah",
+                            data: obcGeo,
+                            embed : '<iframe width="660" height="515" src="//localhost:3000/crime/viz" frameborder="0" allowfullscreen></iframe>',
+                            datafield: "vrste",
+                            embedUrl : 'slicice/vrste' + color,
+                            colorscheme : "Purples"
+                        });
+                } else {
+                    res.json(500, { message: err });
+                }
+            });
+        } else {
+            res.json(500, { message: err });
+        }
+    });
+});
+
 module.exports = router;

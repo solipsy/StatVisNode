@@ -1,0 +1,48 @@
+extends ../layout
+
+
+block content
+  
+  script.
+    var datar = !{JSON.stringify(data)};
+    var field = !{JSON.stringify(datafield)};
+    var colorscheme = !{JSON.stringify(colorscheme)};
+    var embedUrl = !{JSON.stringify(embedUrl)};
+  br
+  br
+  br
+  .row.col-lg-6.col-sm-12
+    #map
+  .row.col-lg-6.col-sm-12.info
+    .title
+        p= title
+    .infotext
+        p Prekopirajte spodnjo kodo v blog ali spletno stran in prikazal se bo zemljevid!
+    .colorselect
+        p Izberite barvo
+        select
+          optgroup(label="Barvne sheme")
+            option(value="Purples" selected) Vijola
+            option(value="Blues") Modra
+            option(value="Greens") Zelena
+            option(value="Oranges") Oranžna
+            option(value="Reds") Rdeča
+            option(value="Greys") Siva
+            option(value="YlGn") Zeleno rumena
+            option(value="YlGnBu") Modro rumena
+            option(value="GnBu") Modro svetlo zelena
+            option(value="BuGn") Električno zelena
+            option(value="PuBuGn") Modro zeleno bela
+            option(value="PuBu") Modrobela
+            option(value="BuPu") Vijolično bela
+            option(value="RdPu") Elekrično vijolična
+            option(value="PuRd") Elekrično vijolična 2
+            option(value="OrRd") Oranžno rdeča
+            option(value="YlOrRd") Oranžno rumeno rdeča
+            option(value="YlOrBr") Oranžno rumena
+    .embed
+        form
+            input#embedurl.embed(type="text",name="whatever")
+  script(src='/javascripts/maps/crimemapmultiplestypesClient.js')
+
+
