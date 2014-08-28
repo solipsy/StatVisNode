@@ -5,6 +5,7 @@ var geo = require ("../models/geo").Geo;
 var fs = require("fs");
 
 router.get('/', function(req, res) {
+    res.header('Access-Control-Allow-Origin', '*');
     elections.find({}, function(err, docs) {
         if(!err) {
             res.json(200, { elections: docs });

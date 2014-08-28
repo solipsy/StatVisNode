@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var debtors = require ("../models/debtors").Debtors;
-var geo = require ("../models/geo").Geo;
+
+var Roads = require ("../models/geo").Roads;
 var _ = require("underscore");
 
 router.get('/', function(req, res) {
     res.header('Access-Control-Allow-Origin', '*');
-    debtors.find({}, function(err, docs) {
+    Roads.find({}, function(err, docs) {
         if(!err) {
             res.json(200, { data: docs });
         } else {

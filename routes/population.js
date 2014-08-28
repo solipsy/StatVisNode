@@ -4,6 +4,7 @@ var population = require ("../models/populationModel").Population;
 var geo = require ("../models/geo").Geo;
 
 router.get('/', function(req, res) {
+    res.header('Access-Control-Allow-Origin', '*');
     population.find({}, function(err, docs) {
         if(!err) {
             res.json(200, { data: docs });

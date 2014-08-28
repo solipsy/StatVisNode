@@ -11,6 +11,7 @@ var crime = require('./routes/crime');
 var population = require('./routes/population');
 var elections = require('./routes/elections');
 var debtors = require('./routes/taxdebtors');
+var ljubljana = require('./routes/ljubljana');
 var APPVAR = require("./appConst.js");
 
 //var jsdom = require ("jsdom");
@@ -50,6 +51,7 @@ app.use('/kriminal', crime);
 app.use('/volitve', elections);
 app.use('/prebivalstvo', population);
 app.use('/durs', debtors);
+app.use('/ljubljana', ljubljana);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

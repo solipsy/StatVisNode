@@ -8,9 +8,16 @@ var geoSchema = mongoose.Schema ({
 
 var featureSchema = mongoose.Schema({
     type : String,
+    properties: mongoose.Schema.Types.Mixed,
+    geometry : mongoose.Schema.Types.Mixed
+});
+
+var roadSchema = mongoose.Schema({
+    type : String,
     properties: {
-        nameUpper : String,
-        nameLower : String
+        type : String,
+        FRC : Number,
+        nameUpper : String
     },
     geometry : {
         type : String,
@@ -26,9 +33,9 @@ var detailedSchema = mongoose.Schema({
 });
 
 var geo = mongoose.model ("Geo", geoSchema, "geo");
-var detailedgeo = mongoose.model ("DetGeo", geoSchema, "detailedgeo");
+var roads = mongoose.model ("Roads", featureSchema, "detgeo");
 
 module.exports = {
     Geo : geo,
-    DetGeo : detailedgeo
+    Roads : roads
 };

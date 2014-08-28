@@ -10,13 +10,15 @@ var idFrame = "a" + time;
 var scripti = '<script>function setIframeSrc() {var s = "http://statvis-21833.onmodulus.net/"' + embedUrl + '/' + colorscheme + ';var iframe1=document.getElementById(idFrame);if ( -1 == navigator.userAgent.indexOf("MSIE") ) {iframe1.src = s;} else {iframe1.location = s;}} setTimeout(setIframeSrc, 5);</script>';
 
 
-max = d3.max(datar.features, function(d) {console.log (d.properties.debtors + " " + d.properties.nameUpper); return +d.properties.debtors;} );
+max = d3.max(datar.features, function(d) { return Math.log(d.properties.debtors);} );
 min = d3.min(datar.features, function(d) { return +d.properties.debtors;} );
 
 console.log (min + " / " + max);
 
   var pad = d3.format("05d"),
       quantizeCB = d3.scale.quantile().domain([min, max]).range(d3.range(9));
+
+
       
 var quantize = d3.scale.quantize()
     .domain([min, max])
@@ -33,7 +35,7 @@ update(datar, year, countries, "normal");
 
 
 function decideColor(geo) {
-    return  quantize(geo.properties.debtors);
+    return  quantize(Math.log(geo.properties.debtors));
 }
 
 function update(json, year, svgType, quantizeType) {
@@ -44,7 +46,7 @@ function update(json, year, svgType, quantizeType) {
             return parseInt(d);
         });
         tooltip.classed("hidden", false).attr("style", "left:" + (mouse[0] + 25) + "px;top:" + mouse[1] + "px").html(function () {
-            return d.properties.debtors;
+            return d.properties.NA_IME + " : " + d.properties.debtors;
         });
         d3.select("#charttitle").selectAll("p").remove();
         //d3.select("#charttitle").append("p").text("Upravna enota: " + d.properties.UE_IME);
@@ -52,13 +54,14 @@ function update(json, year, svgType, quantizeType) {
 
     }).on("mouseout", function(d, i) {
         tooltip.classed("hidden", true);
-        d3.select(this).style("stroke-width", 1).style("stroke-width", 0.5);
+        d3.select(this).style("stroke-width", 1).style("stroke-width", 0.1);
     })
         .attr("class", function(d) {
 			
             return decideColor(d);
         })
-        .style("stroke", "#000").style("stroke-width", .5);
+        .style("stroke", "#666").style("stroke-width", 0.1);
+
         
     d3.selectAll("svg").attr("class", colorscheme);    
 }

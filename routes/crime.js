@@ -7,6 +7,7 @@ var fs = require("fs");
 var APPVAR = require("../appConst.js");
 
 router.get('/api/:selector?/:field?', function(req, res) {
+    res.header('Access-Control-Allow-Origin', '*');
     var tail = "";
     if (req.params.field) tail = "." + req.params.field + " -_id region";
     else tail = " -_id region";
